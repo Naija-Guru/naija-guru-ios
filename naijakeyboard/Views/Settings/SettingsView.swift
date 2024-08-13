@@ -9,7 +9,40 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack(alignment: .leading){
+            Divider()
+            VStack(alignment: .leading){
+                
+                Spacer()
+                    .frame(height: 32)
+                
+                Text("General")
+                    .font(.system(size: 14, weight: Font.Weight.semibold))
+                    .foregroundColor(Color(hex: "747474"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Spacer()
+                    .frame(height: 20)
+                
+                SettingsListItem(image: "ignore_rules", title: "Ignore Rules", subTitle: "See the list of ruels you've ignored")
+                
+                Spacer()
+                    .frame(height: 24)
+                
+                Divider()
+                
+                Spacer()
+                    .frame(height: 24)
+                
+                SettingsListItem(image: "share_feedback", title: "share Feedback", subTitle: "We'd love to hear from you")
+                
+                Spacer()
+            }
+            .padding(.horizontal, AppDimensions.pageMargin)
+        }
+        .navigationTitle("Settings")
+//        .frame(maxWidth: .infinity ,maxHeight: .infinity ).background(.yellow)
     }
 }
 

@@ -1,0 +1,15 @@
+{
+  "originHash" : "432de60cfa0f9c453d67b471316a38804ec7ea587a3c4ce3079ba94db1ef24b3",
+  "pins" : [
+    {
+      "identity" : "emojikit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/niklasamslgruber/EmojiKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b57c28995b8e398d31be0c8b07de0917b0ebb84b"
+      }
+    }
+  ],
+  "version" : 3
+}

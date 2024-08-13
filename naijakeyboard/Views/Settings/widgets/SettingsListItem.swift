@@ -11,13 +11,12 @@ struct SettingsListItem: View {
     
     var image : String
     var title : String
-    var subTitle : Bool
+    var subTitle : String
     
     
     var body: some View {
         HStack{
-            Spacer()
-                .frame(width: 16)
+           
             ZStack{
             Image(uiImage: UIImage(named: image)!)
                 .resizable()
@@ -27,7 +26,10 @@ struct SettingsListItem: View {
             }
             .frame(width: 40, height: 40)
             .background(AppColors.primaryLight)
-            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .clipShape(Circle())
+            
+            Spacer()
+                .frame(width: 16)
             
             VStack{
                 Text(title)
@@ -53,5 +55,5 @@ struct SettingsListItem: View {
 }
 
 #Preview {
-    SettinsListItem()
+    SettingsListItem(image: "ignore_rules", title: "Ignore Rules", subTitle: "see the list of ruels you've ignored")
 }

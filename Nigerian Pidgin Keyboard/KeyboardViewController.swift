@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class KeyboardViewController: UIInputViewController {
 
@@ -33,7 +34,46 @@ class KeyboardViewController: UIInputViewController {
         
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        
+        // Custom Keyboard
+        let customKeyboardView = NigerianPidginSpellCheckerKeyboard(textDocumentProxy: textDocumentProxy, extensionContext: extensionContext) {
+            self.openApp("naijakeyboard://com.naijaguru.naijakeyboard")
+        }
+        
+        let hostingController = HostingController(rootView: customKeyboardView) //UIHostingController(rootView: customKeyboardView)
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        hostingController.didMove(toParent: self)
+
+        // Constraints for SwiftUI view
+        NSLayoutConstraint.activate([
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            hostingController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+//            hostingController.view.bottomAnchor.constraint(equalTo: nextKeyboardButton.topAnchor)  Adjust to not overlap with nextKeyboardButton
+        ])
     }
+    
+    @objc func openURL(_ url: URL) {
+           return
+        }
+    
+    func openApp(_ urlstring:String) {
+
+           var responder: UIResponder? = self as UIResponder
+           let selector = #selector(openURL(_:))
+           while responder != nil {
+              if responder!.responds(to: selector) && responder != self {
+                 responder!.perform(selector, with: URL(string: urlstring)!)
+                 return
+              }
+              responder = responder?.next
+            }
+         }
+
     
     override func viewWillLayoutSubviews() {
         self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
@@ -57,4 +97,25 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
 
+}
+
+class HostingController<Content>: UIHostingController<Content> where Content: View {
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        if #available(iOS 13.0, *) {
+            self.additionalSafeAreaInsets = UIEdgeInsets(top: -self.view.safeAreaInsets.top,
+                                                         left: -self.view.safeAreaInsets.left,
+                                                         bottom: -self.view.safeAreaInsets.bottom,
+                                                         right: -self.view.safeAreaInsets.right)
+        }
+    }
 }

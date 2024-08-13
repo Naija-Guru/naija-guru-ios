@@ -8,17 +8,91 @@
 
 /* Begin PBXBuildFile section */
 		CE7574142C692FB700B1E9CE /* naijakeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574132C692FB700B1E9CE /* naijakeyboardApp.swift */; };
-		CE7574162C692FB700B1E9CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574152C692FB700B1E9CE /* ContentView.swift */; };
 		CE7574182C692FB900B1E9CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7574172C692FB900B1E9CE /* Assets.xcassets */; };
 		CE75741B2C692FB900B1E9CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE75741A2C692FB900B1E9CE /* Preview Assets.xcassets */; };
+		CE7574222C69318200B1E9CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574212C69318200B1E9CE /* HomeView.swift */; };
+		CE7574262C69327300B1E9CE /* AppColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574252C69327300B1E9CE /* AppColours.swift */; };
+		CE7574282C693BBE00B1E9CE /* AppDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574272C693BBE00B1E9CE /* AppDimensions.swift */; };
+		CE75742E2C694C3200B1E9CE /* EnableKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75742D2C694C3200B1E9CE /* EnableKeyboardView.swift */; };
+		CE7574302C69519D00B1E9CE /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75742F2C69519D00B1E9CE /* RoundedCornersShape.swift */; };
+		CE7574332C69576000B1E9CE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574322C69576000B1E9CE /* SettingsView.swift */; };
+		CE7574362C6960C400B1E9CE /* SettingsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574352C6960C400B1E9CE /* SettingsListItem.swift */; };
+		CE75743E2C696AB500B1E9CE /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */; };
+		CE7574422C696AB500B1E9CE /* Nigerian Pidgin Keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE75743B2C696AB400B1E9CE /* Nigerian Pidgin Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE7574482C69759900B1E9CE /* NigerianPidginSpellCheckerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574472C69759900B1E9CE /* NigerianPidginSpellCheckerKeyboard.swift */; };
+		CE75744A2C69790200B1E9CE /* KeyboardTestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574492C69790200B1E9CE /* KeyboardTestUI.swift */; };
+		CE75744F2C699A0E00B1E9CE /* ASCIIKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */; };
+		CE7574522C699A4F00B1E9CE /* NumbersAndSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */; };
+		CE7574542C699A8800B1E9CE /* CharacterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574532C699A8800B1E9CE /* CharacterButton.swift */; };
+		CE7574572C699AE300B1E9CE /* KeyboardColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574562C699AE300B1E9CE /* KeyboardColours.swift */; };
+		CE7574592C699B3100B1E9CE /* SpecialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574582C699B3100B1E9CE /* SpecialButton.swift */; };
+		CE75745B2C699B8900B1E9CE /* Alphabets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75745A2C699B8900B1E9CE /* Alphabets.swift */; };
+		CE75745C2C6A9F7800B1E9CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7574172C692FB900B1E9CE /* Assets.xcassets */; };
+		CE75745E2C6AEBAA00B1E9CE /* NaijaKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75745D2C6AEBAA00B1E9CE /* NaijaKeyboard.swift */; };
+		CE7574612C6AECC100B1E9CE /* NaijaKeyboardIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574602C6AECC100B1E9CE /* NaijaKeyboardIcon.swift */; };
+		CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574652C6B0B7200B1E9CE /* GifImage.swift */; };
+		CE75746E2C6B176E00B1E9CE /* EmojiKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE75746D2C6B176E00B1E9CE /* EmojiKit */; };
+		CE7574702C6B1F8300B1E9CE /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75746F2C6B1F8300B1E9CE /* Emojis.swift */; };
+		CE7574722C6BAC1400B1E9CE /* instructions_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE7574712C6BAC1400B1E9CE /* instructions_gif.gif */; };
+		CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE7574402C696AB500B1E9CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7574082C692FB700B1E9CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE75743A2C696AB400B1E9CE;
+			remoteInfo = "Nigerian Pidgin Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE7574462C696AB500B1E9CE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE7574422C696AB500B1E9CE /* Nigerian Pidgin Keyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE7574102C692FB700B1E9CE /* naijakeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naijakeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7574132C692FB700B1E9CE /* naijakeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naijakeyboardApp.swift; sourceTree = "<group>"; };
-		CE7574152C692FB700B1E9CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE7574172C692FB900B1E9CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE75741A2C692FB900B1E9CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE7574212C69318200B1E9CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE7574252C69327300B1E9CE /* AppColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColours.swift; sourceTree = "<group>"; };
+		CE7574272C693BBE00B1E9CE /* AppDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDimensions.swift; sourceTree = "<group>"; };
+		CE75742D2C694C3200B1E9CE /* EnableKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableKeyboardView.swift; sourceTree = "<group>"; };
+		CE75742F2C69519D00B1E9CE /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		CE7574322C69576000B1E9CE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE7574352C6960C400B1E9CE /* SettingsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListItem.swift; sourceTree = "<group>"; };
+		CE75743B2C696AB400B1E9CE /* Nigerian Pidgin Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nigerian Pidgin Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		CE75743F2C696AB500B1E9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7574472C69759900B1E9CE /* NigerianPidginSpellCheckerKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NigerianPidginSpellCheckerKeyboard.swift; sourceTree = "<group>"; };
+		CE7574492C69790200B1E9CE /* KeyboardTestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTestUI.swift; sourceTree = "<group>"; };
+		CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASCIIKeyboard.swift; sourceTree = "<group>"; };
+		CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersAndSymbols.swift; sourceTree = "<group>"; };
+		CE7574532C699A8800B1E9CE /* CharacterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterButton.swift; sourceTree = "<group>"; };
+		CE7574562C699AE300B1E9CE /* KeyboardColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardColours.swift; sourceTree = "<group>"; };
+		CE7574582C699B3100B1E9CE /* SpecialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialButton.swift; sourceTree = "<group>"; };
+		CE75745A2C699B8900B1E9CE /* Alphabets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabets.swift; sourceTree = "<group>"; };
+		CE75745D2C6AEBAA00B1E9CE /* NaijaKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaijaKeyboard.swift; sourceTree = "<group>"; };
+		CE7574602C6AECC100B1E9CE /* NaijaKeyboardIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaijaKeyboardIcon.swift; sourceTree = "<group>"; };
+		CE7574622C6AFE6600B1E9CE /* Nigerian Pidgin Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Nigerian Pidgin Keyboard.entitlements"; sourceTree = "<group>"; };
+		CE7574632C6AFED900B1E9CE /* naijakeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = naijakeyboard.entitlements; sourceTree = "<group>"; };
+		CE7574642C6AFF4200B1E9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE7574652C6B0B7200B1E9CE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		CE75746F2C6B1F8300B1E9CE /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
+		CE7574712C6BAC1400B1E9CE /* instructions_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = instructions_gif.gif; sourceTree = "<group>"; };
+		CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +103,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE7574382C696AB400B1E9CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE75746E2C6B176E00B1E9CE /* EmojiKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7574122C692FB700B1E9CE /* naijakeyboard */,
+				CE75743C2C696AB400B1E9CE /* Nigerian Pidgin Keyboard */,
 				CE7574112C692FB700B1E9CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7574102C692FB700B1E9CE /* naijakeyboard.app */,
+				CE75743B2C696AB400B1E9CE /* Nigerian Pidgin Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +135,14 @@
 		CE7574122C692FB700B1E9CE /* naijakeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				CE7574672C6B0E4600B1E9CE /* Assets */,
+				CE7574242C69325700B1E9CE /* Theme */,
+				CE7574232C69319000B1E9CE /* Views */,
+				CE7574732C6BAC7800B1E9CE /* ViewModels */,
 				CE7574132C692FB700B1E9CE /* naijakeyboardApp.swift */,
-				CE7574152C692FB700B1E9CE /* ContentView.swift */,
 				CE7574172C692FB900B1E9CE /* Assets.xcassets */,
+				CE7574642C6AFF4200B1E9CE /* Info.plist */,
+				CE7574632C6AFED900B1E9CE /* naijakeyboard.entitlements */,
 				CE7574192C692FB900B1E9CE /* Preview Content */,
 			);
 			path = naijakeyboard;
@@ -67,6 +156,145 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CE7574232C69319000B1E9CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574312C69575100B1E9CE /* Settings */,
+				CE7574292C69434F00B1E9CE /* Home */,
+				CE7574492C69790200B1E9CE /* KeyboardTestUI.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE7574242C69325700B1E9CE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574252C69327300B1E9CE /* AppColours.swift */,
+				CE7574272C693BBE00B1E9CE /* AppDimensions.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		CE7574292C69434F00B1E9CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE75742A2C6943C300B1E9CE /* widgets */,
+				CE7574212C69318200B1E9CE /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE75742A2C6943C300B1E9CE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE75742D2C694C3200B1E9CE /* EnableKeyboardView.swift */,
+				CE75742F2C69519D00B1E9CE /* RoundedCornersShape.swift */,
+				CE7574652C6B0B7200B1E9CE /* GifImage.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CE7574312C69575100B1E9CE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574342C6960B100B1E9CE /* widgets */,
+				CE7574322C69576000B1E9CE /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE7574342C6960B100B1E9CE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574352C6960C400B1E9CE /* SettingsListItem.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CE75743C2C696AB400B1E9CE /* Nigerian Pidgin Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574622C6AFE6600B1E9CE /* Nigerian Pidgin Keyboard.entitlements */,
+				CE7574552C699AB400B1E9CE /* Theme */,
+				CE75744B2C69998D00B1E9CE /* views */,
+				CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */,
+				CE75743F2C696AB500B1E9CE /* Info.plist */,
+				CE7574472C69759900B1E9CE /* NigerianPidginSpellCheckerKeyboard.swift */,
+			);
+			path = "Nigerian Pidgin Keyboard";
+			sourceTree = "<group>";
+		};
+		CE75744B2C69998D00B1E9CE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CE75744D2C6999C600B1E9CE /* NigerianPidginSpellChecker */,
+				CE75744C2C6999A000B1E9CE /* ASCIIKeyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CE75744C2C6999A000B1E9CE /* ASCIIKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574502C699A2D00B1E9CE /* Widgets */,
+				CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */,
+			);
+			path = ASCIIKeyboard;
+			sourceTree = "<group>";
+		};
+		CE75744D2C6999C600B1E9CE /* NigerianPidginSpellChecker */ = {
+			isa = PBXGroup;
+			children = (
+				CE75745F2C6AEC9600B1E9CE /* widgets */,
+				CE75745D2C6AEBAA00B1E9CE /* NaijaKeyboard.swift */,
+			);
+			path = NigerianPidginSpellChecker;
+			sourceTree = "<group>";
+		};
+		CE7574502C699A2D00B1E9CE /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */,
+				CE7574532C699A8800B1E9CE /* CharacterButton.swift */,
+				CE7574582C699B3100B1E9CE /* SpecialButton.swift */,
+				CE75745A2C699B8900B1E9CE /* Alphabets.swift */,
+				CE75746F2C6B1F8300B1E9CE /* Emojis.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		CE7574552C699AB400B1E9CE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574562C699AE300B1E9CE /* KeyboardColours.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		CE75745F2C6AEC9600B1E9CE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574602C6AECC100B1E9CE /* NaijaKeyboardIcon.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CE7574672C6B0E4600B1E9CE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574712C6BAC1400B1E9CE /* instructions_gif.gif */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CE7574732C6BAC7800B1E9CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +305,37 @@
 				CE75740C2C692FB700B1E9CE /* Sources */,
 				CE75740D2C692FB700B1E9CE /* Frameworks */,
 				CE75740E2C692FB700B1E9CE /* Resources */,
+				CE7574462C696AB500B1E9CE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE7574412C696AB500B1E9CE /* PBXTargetDependency */,
 			);
 			name = naijakeyboard;
 			productName = naijakeyboard;
 			productReference = CE7574102C692FB700B1E9CE /* naijakeyboard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE75743A2C696AB400B1E9CE /* Nigerian Pidgin Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7574432C696AB500B1E9CE /* Build configuration list for PBXNativeTarget "Nigerian Pidgin Keyboard" */;
+			buildPhases = (
+				CE7574372C696AB400B1E9CE /* Sources */,
+				CE7574382C696AB400B1E9CE /* Frameworks */,
+				CE7574392C696AB400B1E9CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nigerian Pidgin Keyboard";
+			packageProductDependencies = (
+				CE75746D2C6B176E00B1E9CE /* EmojiKit */,
+			);
+			productName = "Nigerian Pidgin Keyboard";
+			productReference = CE75743B2C696AB400B1E9CE /* Nigerian Pidgin Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +350,9 @@
 					CE75740F2C692FB700B1E9CE = {
 						CreatedOnToolsVersion = 15.4;
 					};
+					CE75743A2C696AB400B1E9CE = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = CE75740B2C692FB700B1E9CE /* Build configuration list for PBXProject "naijakeyboard" */;
@@ -111,11 +364,15 @@
 				Base,
 			);
 			mainGroup = CE7574072C692FB700B1E9CE;
+			packageReferences = (
+				CE75746C2C6B176E00B1E9CE /* XCRemoteSwiftPackageReference "EmojiKit" */,
+			);
 			productRefGroup = CE7574112C692FB700B1E9CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				CE75740F2C692FB700B1E9CE /* naijakeyboard */,
+				CE75743A2C696AB400B1E9CE /* Nigerian Pidgin Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -125,8 +382,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7574722C6BAC1400B1E9CE /* instructions_gif.gif in Resources */,
 				CE75741B2C692FB900B1E9CE /* Preview Assets.xcassets in Resources */,
 				CE7574182C692FB900B1E9CE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7574392C696AB400B1E9CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE75745C2C6A9F7800B1E9CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +403,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7574162C692FB700B1E9CE /* ContentView.swift in Sources */,
+				CE75742E2C694C3200B1E9CE /* EnableKeyboardView.swift in Sources */,
+				CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */,
+				CE7574332C69576000B1E9CE /* SettingsView.swift in Sources */,
+				CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */,
+				CE75744A2C69790200B1E9CE /* KeyboardTestUI.swift in Sources */,
+				CE7574282C693BBE00B1E9CE /* AppDimensions.swift in Sources */,
+				CE7574222C69318200B1E9CE /* HomeView.swift in Sources */,
 				CE7574142C692FB700B1E9CE /* naijakeyboardApp.swift in Sources */,
+				CE7574362C6960C400B1E9CE /* SettingsListItem.swift in Sources */,
+				CE7574262C69327300B1E9CE /* AppColours.swift in Sources */,
+				CE7574302C69519D00B1E9CE /* RoundedCornersShape.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7574372C696AB400B1E9CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE75743E2C696AB500B1E9CE /* KeyboardViewController.swift in Sources */,
+				CE7574482C69759900B1E9CE /* NigerianPidginSpellCheckerKeyboard.swift in Sources */,
+				CE7574522C699A4F00B1E9CE /* NumbersAndSymbols.swift in Sources */,
+				CE75744F2C699A0E00B1E9CE /* ASCIIKeyboard.swift in Sources */,
+				CE7574572C699AE300B1E9CE /* KeyboardColours.swift in Sources */,
+				CE7574612C6AECC100B1E9CE /* NaijaKeyboardIcon.swift in Sources */,
+				CE75745E2C6AEBAA00B1E9CE /* NaijaKeyboard.swift in Sources */,
+				CE7574592C699B3100B1E9CE /* SpecialButton.swift in Sources */,
+				CE75745B2C699B8900B1E9CE /* Alphabets.swift in Sources */,
+				CE7574702C6B1F8300B1E9CE /* Emojis.swift in Sources */,
+				CE7574542C699A8800B1E9CE /* CharacterButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE7574412C696AB500B1E9CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE75743A2C696AB400B1E9CE /* Nigerian Pidgin Keyboard */;
+			targetProxy = CE7574402C696AB500B1E9CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CE75741C2C692FB900B1E9CE /* Debug */ = {
@@ -267,13 +568,18 @@
 		CE75741F2C692FB900B1E9CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = naijakeyboard/naijakeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"naijakeyboard/Preview Content\"";
+				DEVELOPMENT_TEAM = 6SRNS7ABJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = naijakeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Keyboard";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,13 +601,18 @@
 		CE7574202C692FB900B1E9CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = naijakeyboard/naijakeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"naijakeyboard/Preview Content\"";
+				DEVELOPMENT_TEAM = 6SRNS7ABJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = naijakeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Keyboard";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,6 +625,58 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naijaguru.naijakeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE7574442C696AB500B1E9CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Nigerian Pidgin Keyboard/Nigerian Pidgin Keyboard.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6SRNS7ABJ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nigerian Pidgin Keyboard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Keyboard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.naijaguru.naijakeyboard.Nigerian-Pidgin-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE7574452C696AB500B1E9CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Nigerian Pidgin Keyboard/Nigerian Pidgin Keyboard.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6SRNS7ABJ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nigerian Pidgin Keyboard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Keyboard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.naijaguru.naijakeyboard.Nigerian-Pidgin-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,7 +704,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		CE7574432C696AB500B1E9CE /* Build configuration list for PBXNativeTarget "Nigerian Pidgin Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7574442C696AB500B1E9CE /* Debug */,
+				CE7574452C696AB500B1E9CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE75746C2C6B176E00B1E9CE /* XCRemoteSwiftPackageReference "EmojiKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/niklasamslgruber/EmojiKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE75746D2C6B176E00B1E9CE /* EmojiKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE75746C2C6B176E00B1E9CE /* XCRemoteSwiftPackageReference "EmojiKit" */;
+			productName = EmojiKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE7574082C692FB700B1E9CE /* Project object */;
 }
