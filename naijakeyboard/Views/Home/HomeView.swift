@@ -14,17 +14,12 @@ struct HomeView: View {
     var body: some View {
         
         VStack{
-            ZStack{
-                Image("nb_logo")
+
+                Image("naija_guru_logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 38, height: 38)
-                
-            }
-            .frame(width: 66.7, height: 66.7)
-            .background(AppColors.primary)
-            .cornerRadius(18)
-            
+                    .frame(width: 77, height: 92)
+
             //
             Spacer()
                 .frame(height: 30)

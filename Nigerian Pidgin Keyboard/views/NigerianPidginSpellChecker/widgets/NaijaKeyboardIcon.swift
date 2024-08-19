@@ -12,7 +12,7 @@ struct NaijaKeyboardIcon: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             ZStack{
-                Image(uiImage: UIImage(named: "nb_logo")!)
+                Image(uiImage: UIImage(named: "keyboard")!)
                     .resizable()
                     .frame(width: 28, height: 28)
                     .foregroundColor(KeyboardColours.primaryDark)

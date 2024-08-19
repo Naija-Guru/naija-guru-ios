@@ -35,17 +35,15 @@ struct EnableKeyboardView: View {
             
             ZStack(alignment: .bottom){
                 GifImage("instructions_gif")
-                    .clipShape(
-                RoundedCornersShape(corners: [.topLeft, .topRight], radius: 10)
-                    )
+                    .padding(40)
+                    .clipShape(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 10))
                     .overlay {
                         RoundedCornersShape(corners: [.topLeft, .topRight], radius: 10)
-                            
                             .fill(LinearGradient(gradient: Gradient(colors: [ Color.clear, Color.white]),
                                              startPoint: .top,
                                              endPoint: .bottom))
                     }
-                    .padding(25)
+                    
                 
                 Button(action: {
                     openSettings()

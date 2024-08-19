@@ -34,6 +34,14 @@ struct SettingsView: View {
                 
                 Spacer()
                     .frame(height: 24)
+                NavigationLink(destination:  SpellCheckServerView(), label: {
+                    SettingsListItem(image: "server", title: "Spell Check Servers", subTitle: "Change spell check servers")
+                })
+                
+                Divider()
+                
+                Spacer()
+                    .frame(height: 24)
                 
                 SettingsListItem(image: "share_feedback", title: "share Feedback", subTitle: "We'd love to hear from you")
                 

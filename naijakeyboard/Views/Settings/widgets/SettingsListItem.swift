@@ -25,7 +25,7 @@ struct SettingsListItem: View {
                 .foregroundColor(AppColors.primary)
             }
             .frame(width: 40, height: 40)
-            .background(AppColors.primaryLight)
+            .background(AppColors.secondaryColor)
             .clipShape(Circle())
             
             Spacer()

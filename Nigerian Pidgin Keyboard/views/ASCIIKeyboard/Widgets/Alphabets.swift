@@ -19,7 +19,7 @@ struct Alphabets: View {
     let insertText: (String) -> Void
     let backSpace: () -> Void
     
-    let QUERTY: [[String]] = [
+    let QWERTY: [[String]] = [
         ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
         ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
         ["Z", "X", "C", "V", "B", "N", "M"]
@@ -36,8 +36,8 @@ struct Alphabets: View {
         VStack(spacing: verticalSpace) {
             let fontSize = isCapslockOn ? 20.0 : 24.0
             HStack(spacing: spacing) {
-                ForEach(0..<( isCapslockOn ? QUERTY : qwerty)[0].count, id: \.self) { index in
-                    CharacterButton(title: ( isCapslockOn ? QUERTY : qwerty)[0][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
+                ForEach(0..<( isCapslockOn ? QWERTY : qwerty)[0].count, id: \.self) { index in
+                    CharacterButton(title: ( isCapslockOn ? QWERTY : qwerty)[0][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
                     
                 }
 
@@ -45,8 +45,8 @@ struct Alphabets: View {
             
             HStack( alignment: .center, spacing: spacing) {
                 
-                ForEach(0..<( isCapslockOn ? QUERTY : qwerty)[1].count, id: \.self) { index in
-                    CharacterButton(title:( isCapslockOn ? QUERTY : qwerty)[1][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
+                ForEach(0..<( isCapslockOn ? QWERTY : qwerty)[1].count, id: \.self) { index in
+                    CharacterButton(title:( isCapslockOn ? QWERTY : qwerty)[1][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
                 }
                 
             }
@@ -67,8 +67,8 @@ struct Alphabets: View {
                 
                 HStack( spacing: spacing) {
                     
-                    ForEach(0..<( isCapslockOn ? QUERTY : qwerty)[2].count, id: \.self) { index in
-                        CharacterButton(title: ( isCapslockOn ? QUERTY : qwerty)[2][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
+                    ForEach(0..<( isCapslockOn ? QWERTY : qwerty)[2].count, id: \.self) { index in
+                        CharacterButton(title: ( isCapslockOn ? QWERTY : qwerty)[2][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
                     }
                     
                 }

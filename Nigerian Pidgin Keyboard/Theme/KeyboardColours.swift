@@ -11,10 +11,10 @@ import Foundation
 import SwiftUI
 
 class KeyboardColours {
+    //todo: font family
     
-    
-    static var primary = Color(hex: "15C39A")
-    static var primaryDark = Color(hex:"018F56")
+    static var primary = Color(hex: "0E3F30")
+    static var primaryDark = Color(hex:"0E3F30")
     static var primaryLight = Color(hex: "C5EBDC")
     static var primaryLightOnWhite = Color(hex: "E9F5F2")
     

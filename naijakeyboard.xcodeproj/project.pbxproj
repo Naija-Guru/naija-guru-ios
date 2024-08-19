@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE74F0842C72B21000BE305B /* instructions_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE74F0832C72B21000BE305B /* instructions_gif.gif */; };
+		CE74F0872C72B9AF00BE305B /* SpellCheckServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */; };
+		CE74F08A2C72BD4100BE305B /* ServerListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F0892C72BD4100BE305B /* ServerListItemView.swift */; };
 		CE7574142C692FB700B1E9CE /* naijakeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574132C692FB700B1E9CE /* naijakeyboardApp.swift */; };
 		CE7574182C692FB900B1E9CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7574172C692FB900B1E9CE /* Assets.xcassets */; };
 		CE75741B2C692FB900B1E9CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE75741A2C692FB900B1E9CE /* Preview Assets.xcassets */; };
@@ -33,7 +36,6 @@
 		CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574652C6B0B7200B1E9CE /* GifImage.swift */; };
 		CE75746E2C6B176E00B1E9CE /* EmojiKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE75746D2C6B176E00B1E9CE /* EmojiKit */; };
 		CE7574702C6B1F8300B1E9CE /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75746F2C6B1F8300B1E9CE /* Emojis.swift */; };
-		CE7574722C6BAC1400B1E9CE /* instructions_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE7574712C6BAC1400B1E9CE /* instructions_gif.gif */; };
 		CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE74F0832C72B21000BE305B /* instructions_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = instructions_gif.gif; sourceTree = "<group>"; };
+		CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckServerView.swift; sourceTree = "<group>"; };
+		CE74F0892C72BD4100BE305B /* ServerListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListItemView.swift; sourceTree = "<group>"; };
 		CE7574102C692FB700B1E9CE /* naijakeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naijakeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7574132C692FB700B1E9CE /* naijakeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naijakeyboardApp.swift; sourceTree = "<group>"; };
 		CE7574172C692FB900B1E9CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +96,6 @@
 		CE7574642C6AFF4200B1E9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE7574652C6B0B7200B1E9CE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		CE75746F2C6B1F8300B1E9CE /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
-		CE7574712C6BAC1400B1E9CE /* instructions_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = instructions_gif.gif; sourceTree = "<group>"; };
 		CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE74F0852C72B98100BE305B /* SpellCheckServers */ = {
+			isa = PBXGroup;
+			children = (
+				CE74F0882C72BD2700BE305B /* widgets */,
+				CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */,
+			);
+			path = SpellCheckServers;
+			sourceTree = "<group>";
+		};
+		CE74F0882C72BD2700BE305B /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE74F0892C72BD4100BE305B /* ServerListItemView.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
 		CE7574072C692FB700B1E9CE = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +180,7 @@
 		CE7574232C69319000B1E9CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE74F0852C72B98100BE305B /* SpellCheckServers */,
 				CE7574312C69575100B1E9CE /* Settings */,
 				CE7574292C69434F00B1E9CE /* Home */,
 				CE7574492C69790200B1E9CE /* KeyboardTestUI.swift */,
@@ -282,7 +304,7 @@
 		CE7574672C6B0E4600B1E9CE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				CE7574712C6BAC1400B1E9CE /* instructions_gif.gif */,
+				CE74F0832C72B21000BE305B /* instructions_gif.gif */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -382,7 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7574722C6BAC1400B1E9CE /* instructions_gif.gif in Resources */,
+				CE74F0842C72B21000BE305B /* instructions_gif.gif in Resources */,
 				CE75741B2C692FB900B1E9CE /* Preview Assets.xcassets in Resources */,
 				CE7574182C692FB900B1E9CE /* Assets.xcassets in Resources */,
 			);
@@ -408,11 +430,13 @@
 				CE7574332C69576000B1E9CE /* SettingsView.swift in Sources */,
 				CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */,
 				CE75744A2C69790200B1E9CE /* KeyboardTestUI.swift in Sources */,
+				CE74F0872C72B9AF00BE305B /* SpellCheckServerView.swift in Sources */,
 				CE7574282C693BBE00B1E9CE /* AppDimensions.swift in Sources */,
 				CE7574222C69318200B1E9CE /* HomeView.swift in Sources */,
 				CE7574142C692FB700B1E9CE /* naijakeyboardApp.swift in Sources */,
 				CE7574362C6960C400B1E9CE /* SettingsListItem.swift in Sources */,
 				CE7574262C69327300B1E9CE /* AppColours.swift in Sources */,
+				CE74F08A2C72BD4100BE305B /* ServerListItemView.swift in Sources */,
 				CE7574302C69519D00B1E9CE /* RoundedCornersShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
