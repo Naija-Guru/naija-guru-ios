@@ -43,7 +43,7 @@ struct ASCIIKeyboard: View {
                     
                     HStack(spacing: 0){
                         
-                        NaijaKeyboardIcon()
+                        NaijaGuruIcon(errorCount: 3)
                         .padding(.leading, 12)
                         .onTapGesture {
                             showNaijaKeyboard()

@@ -7,33 +7,31 @@
 
 import SwiftUI
 
-struct NaijaKeyboardIcon: View {
-    let errorCount : Int = 0
+struct NaijaKeyboardIconButton: View {
+    let namedAsset: String?
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
             ZStack{
-                Image(uiImage: UIImage(named: "keyboard")!)
-                    .resizable()
-                    .frame(width: 28, height: 28)
-                    .foregroundColor(KeyboardColours.primaryDark)
+                if(namedAsset != nil){
+                    Image(uiImage: UIImage(named: namedAsset!)!)
+                        .resizable()
+                        .frame(width: 28, height: 28)
+                        .foregroundColor(KeyboardColours.primaryDark)
+                }else{
+                    Image(systemName: "gear")
+                        .resizable()
+                        .frame(width: 28, height: 28)
+                        .foregroundColor(KeyboardColours.primaryDark)
+                }
             }
             .frame(width: 36, height: 36)
-            .background(KeyboardColours.primaryLight)
+            .background(KeyboardColours.secondaryColor)
             .clipShape(Circle())
-            // Badge
-            if errorCount > 0 {
-                Text("3")
-                    .font(.system(size: 14, weight: Font.Weight.medium))
-                    .foregroundColor(.white)
-                    .padding(5)
-                    .background(KeyboardColours.primaryDark)
-                    .clipShape(Circle())
-                    .offset(x: 10, y: -10)
-            }
         }
     }
 }
 
 #Preview {
-    NaijaKeyboardIcon()
+    NaijaKeyboardIconButton(namedAsset: "keyboard")
 }

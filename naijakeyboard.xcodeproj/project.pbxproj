@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1678622C7563D80057F0A1 /* NaijaGuruIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1678612C7563D70057F0A1 /* NaijaGuruIcon.swift */; };
 		CE74F0842C72B21000BE305B /* instructions_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE74F0832C72B21000BE305B /* instructions_gif.gif */; };
 		CE74F0872C72B9AF00BE305B /* SpellCheckServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */; };
 		CE74F08A2C72BD4100BE305B /* ServerListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F0892C72BD4100BE305B /* ServerListItemView.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE1678612C7563D70057F0A1 /* NaijaGuruIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaijaGuruIcon.swift; sourceTree = "<group>"; };
 		CE74F0832C72B21000BE305B /* instructions_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = instructions_gif.gif; sourceTree = "<group>"; };
 		CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckServerView.swift; sourceTree = "<group>"; };
 		CE74F0892C72BD4100BE305B /* ServerListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListItemView.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				CE7574582C699B3100B1E9CE /* SpecialButton.swift */,
 				CE75745A2C699B8900B1E9CE /* Alphabets.swift */,
 				CE75746F2C6B1F8300B1E9CE /* Emojis.swift */,
+				CE1678612C7563D70057F0A1 /* NaijaGuruIcon.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				CE7574522C699A4F00B1E9CE /* NumbersAndSymbols.swift in Sources */,
 				CE75744F2C699A0E00B1E9CE /* ASCIIKeyboard.swift in Sources */,
 				CE7574572C699AE300B1E9CE /* KeyboardColours.swift in Sources */,
+				CE1678622C7563D80057F0A1 /* NaijaGuruIcon.swift in Sources */,
 				CE7574612C6AECC100B1E9CE /* NaijaKeyboardIcon.swift in Sources */,
 				CE75745E2C6AEBAA00B1E9CE /* NaijaKeyboard.swift in Sources */,
 				CE7574592C699B3100B1E9CE /* SpecialButton.swift in Sources */,

@@ -9,11 +9,11 @@ import SwiftUI
 
 struct Alphabets: View {
     
-    @State var isCapslockOn = true
+    @State var isShiftKeyOn = true
+    @State var isCapslockOn = false
 
     
     var alphabetWidth: CGFloat = 33
-//    var specialButtonWidth: CGFloat = 33
     var spacing : CGFloat
     var verticalSpace : CGFloat
     let insertText: (String) -> Void
@@ -30,14 +30,25 @@ struct Alphabets: View {
         ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
         ["z", "x", "c", "v", "b", "n", "m"]
     ]
+    
+    var shouldShowUpperCase: Bool {
+        return isCapslockOn ? true : isShiftKeyOn
+    }
+    
+    func insertAlphabet(alphabet : String) -> Void {
+        insertText(alphabet)
+        if(!isCapslockOn){
+            isShiftKeyOn = false
+        }
+    }
 
     
     var body: some View {
         VStack(spacing: verticalSpace) {
-            let fontSize = isCapslockOn ? 20.0 : 24.0
+            let fontSize = shouldShowUpperCase ? 20.0 : 24.0
             HStack(spacing: spacing) {
-                ForEach(0..<( isCapslockOn ? QWERTY : qwerty)[0].count, id: \.self) { index in
-                    CharacterButton(title: ( isCapslockOn ? QWERTY : qwerty)[0][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
+                ForEach(0..<( shouldShowUpperCase ? QWERTY : qwerty)[0].count, id: \.self) { index in
+                    CharacterButton(title: ( shouldShowUpperCase ? QWERTY : qwerty)[0][index], width: alphabetWidth, insertText: insertAlphabet, fontSize: fontSize)
                     
                 }
 
@@ -45,8 +56,8 @@ struct Alphabets: View {
             
             HStack( alignment: .center, spacing: spacing) {
                 
-                ForEach(0..<( isCapslockOn ? QWERTY : qwerty)[1].count, id: \.self) { index in
-                    CharacterButton(title:( isCapslockOn ? QWERTY : qwerty)[1][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
+                ForEach(0..<( shouldShowUpperCase ? QWERTY : qwerty)[1].count, id: \.self) { index in
+                    CharacterButton(title:( shouldShowUpperCase ? QWERTY : qwerty)[1][index], width: alphabetWidth, insertText: insertAlphabet, fontSize: fontSize)
                 }
                 
             }
@@ -57,9 +68,21 @@ struct Alphabets: View {
             
             HStack(spacing: 0) {
                 //"capslock.fill" : "capslock"
-                SpecialButton(image: isCapslockOn ? "arrowshape.up.fill" : "arrowshape.up", title: "", width: tSpecialWidth, isDark: isCapslockOn ? false : true) {
-                    isCapslockOn = !isCapslockOn
-                }
+                Image(systemName: isCapslockOn ? "capslock.fill" : isShiftKeyOn ? "arrowshape.up.fill" : "arrowshape.up")
+                    .frame(width: tSpecialWidth,height: 42)
+                    .foregroundColor(.black)
+                    .background( (!shouldShowUpperCase ? false : true) ? Color(hex: "ABB1BA") : Color.white)
+                    .cornerRadius(5)
+                    .shadow(color: Color(hex: "888A8D"), radius: 0.5, x: 0, y: 1)
+                    .onTapGesture(count: 2) {
+//                        print("on double tap called")
+                        isCapslockOn = !isCapslockOn
+                    }
+                    .onTapGesture {
+//                        print("on single tap called")
+                        isShiftKeyOn = !isShiftKeyOn
+                        isCapslockOn = false
+                    }
                 
                 Rectangle()
                     .fill(.clear)
@@ -67,8 +90,8 @@ struct Alphabets: View {
                 
                 HStack( spacing: spacing) {
                     
-                    ForEach(0..<( isCapslockOn ? QWERTY : qwerty)[2].count, id: \.self) { index in
-                        CharacterButton(title: ( isCapslockOn ? QWERTY : qwerty)[2][index], width: alphabetWidth, insertText: insertText, fontSize: fontSize)
+                    ForEach(0..<( shouldShowUpperCase ? QWERTY : qwerty)[2].count, id: \.self) { index in
+                        CharacterButton(title: ( shouldShowUpperCase ? QWERTY : qwerty)[2][index], width: alphabetWidth, insertText: insertAlphabet, fontSize: fontSize)
                     }
                     
                 }

@@ -50,6 +50,11 @@ struct SpecialButton: View {
                     .shadow(color: Color(hex: "888A8D"), radius: 0.5, x: 0, y: 1)
             }
         })
+        .onTapGesture(count: 2) {
+                        // Double-tap action
+            print("double tap called from special button")
+//                        isTapped.toggle()
+                    }
     }
 }
 

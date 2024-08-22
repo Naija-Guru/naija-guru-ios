@@ -35,6 +35,13 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
+        let sentence = "This is an example sentence."
+                let underlinedWord = "example"
+                let replacementWord = "test"
+                
+//                let underlinedSentence = underlineWord(in: sentence, word: underlinedWord, color: .red)
+//                let replacedSentence = replaceWord(in: sentence, targetWord: underlinedWord, replacementWord: replacementWord)
+        
         
         // Custom Keyboard
         let customKeyboardView = NigerianPidginSpellCheckerKeyboard(textDocumentProxy: textDocumentProxy, extensionContext: extensionContext) {
@@ -53,9 +60,26 @@ class KeyboardViewController: UIInputViewController {
             hostingController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
             hostingController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
             hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//            hostingController.view.bottomAnchor.constraint(equalTo: nextKeyboardButton.topAnchor)  Adjust to not overlap with nextKeyboardButton
         ])
+
+        
     }
+    
+    // Function to replace a word with another word
+       func replaceWord(targetWord: String, replacementWord: String) {
+           guard let text = textDocumentProxy.documentContextBeforeInput else { return }
+           
+           // Find the word in the existing text
+           let newText = text.replacingOccurrences(of: targetWord, with: replacementWord)
+           
+           // Delete the old text
+           for _ in text {
+               textDocumentProxy.deleteBackward()
+           }
+           
+           // Insert the new text
+           textDocumentProxy.insertText(newText)
+       }
     
     @objc func openURL(_ url: URL) {
            return

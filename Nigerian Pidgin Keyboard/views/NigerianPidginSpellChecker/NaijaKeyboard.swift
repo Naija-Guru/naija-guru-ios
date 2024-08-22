@@ -40,7 +40,7 @@ struct NaijaKeyboard: View {
             
             HStack(spacing: 0){
                 
-                NaijaKeyboardIcon()
+                NaijaKeyboardIconButton(namedAsset: "keyboard")
                     .padding(.leading, 12)
                     .onTapGesture {
                         hideNaijaKeyboard()
@@ -53,15 +53,8 @@ struct NaijaKeyboard: View {
                     .font(.system(size: 14))
                     .foregroundColor(Color(hex:"8E8E93"))
                 Spacer()
-                ZStack{
-                    Image(systemName: "gear")
-                        .resizable()
-                        .frame(width: 28, height: 28)
-                        .foregroundColor(KeyboardColours.primaryDark)
-                }
-                .frame(width: 36, height: 36)
-                .background(KeyboardColours.primaryLight)
-                .clipShape(Circle())
+                
+                NaijaKeyboardIconButton(namedAsset: nil)
                 .padding(.trailing, 12)
                 .onTapGesture {
                     print("tap settings")

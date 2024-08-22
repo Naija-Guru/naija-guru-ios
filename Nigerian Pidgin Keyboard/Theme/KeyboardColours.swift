@@ -18,6 +18,8 @@ class KeyboardColours {
     static var primaryLight = Color(hex: "C5EBDC")
     static var primaryLightOnWhite = Color(hex: "E9F5F2")
     
+    static var secondaryColor = Color(hex: "EDEAE4")
+    
     static var wrongSpelling = Color(hex: "FF7A75")
     static var correctSpelling = Color(hex: "335DE3")
     
