@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  naijakeyboard
 //
-//  Created by Hyebreed on 11/08/2024.
+//  Created by Emmanuel Idaresit on 11/08/2024.
 //
 
 import SwiftUI
@@ -10,35 +10,40 @@ import SwiftUI
 struct HomeView: View {
     
 //    @State private var navigateToPage = false
-    
+//    init(){
+//        for familyName in UIFont.familyNames {
+//            print(familyName)
+//            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+//                print("-- \(fontName)")
+//            }
+//        }
+//    }
     var body: some View {
         
         VStack{
-            ZStack{
-                Image("nb_logo")
+
+                Image("naija_guru_logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 38, height: 38)
-                
-            }
-            .frame(width: 66.7, height: 66.7)
-            .background(AppColors.primary)
-            .cornerRadius(18)
-            
+                    .frame(width: 77, height: 92)
+
             //
             Spacer()
                 .frame(height: 30)
             
             Text("Welcome to Naija Keyboard")
-                .font(.system(size: 26, weight: Font.Weight.semibold))
-                .foregroundColor(AppColors.title)
+                .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 26))
+            
+//                .font(.system(size: 26, weight: Font.Weight.semibold))
+                .foregroundColor(AppColors.primary)
             
             Spacer()
                 .frame(height: 8)
             
             
             Text("Get your Naija Pidgin grammar on point...")
-                .font(.system(size: 18, weight: Font.Weight.regular))
+                .font(.custom("CabinetGroteskVariable-Bold_Regular", size: 18))
+//                .font(.system(size: 18, weight: Font.Weight.regular))
                 .foregroundColor(AppColors.headerSubtitle)
             
             Spacer()
@@ -64,7 +69,8 @@ struct HomeView: View {
                     .cornerRadius(20)
                     
                     Text("Settings")
-                        .font(.system(size: 16, weight: Font.Weight.semibold))
+                        .font(.custom("CabinetGroteskVariable-Bold_Medium", size: 18))
+//                        .font(.system(size: 16, weight: Font.Weight.semibold))
                         .foregroundColor(Color(hex:"292C32"))
                     
                 }
