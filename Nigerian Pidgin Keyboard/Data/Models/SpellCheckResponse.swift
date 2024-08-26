@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - SpellCheckResponse
 struct SpellCheckResponse: Codable {
     let software: Software
