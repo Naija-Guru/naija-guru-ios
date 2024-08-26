@@ -15,5 +15,25 @@
 			</array>
 		</dict>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CabinetGrotesk-Variable.ttf</string>
+		<string>Poppins-Black.ttf</string>
+		<string>Poppins-BlackItalic.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-ExtraBold.ttf</string>
+		<string>Poppins-ExtraBoldItalic.ttf</string>
+		<string>Poppins-ExtraLight.ttf</string>
+		<string>Poppins-ExtraLightItalic.ttf</string>
+		<string>Poppins-Italic</string>
+		<string>Poppins-Light</string>
+		<string>Poppins-LightItalic</string>
+		<string>Poppins-Medium</string>
+		<string>Poppins-Regular</string>
+		<string>Poppins-SemiBold</string>
+		<string>Poppins-SemiBolItalic</string>
+		<string>Poppins-Thin</string>
+		<string>Poppins-ThinItalic</string>
+	</array>
 </dict>
 </plist>

@@ -2,12 +2,15 @@
 //  SpellCheckServerView.swift
 //  naijakeyboard
 //
-//  Created by Hyebreed on 19/08/2024.
+//  Created by Emmanuel Idaresit on 19/08/2024.
 //
 
 import SwiftUI
 
 struct SpellCheckServerView: View {
+    
+    @EnvironmentObject private var settingsVM : SettingsViewModel
+    
     var body: some View {
         VStack(alignment: .leading){
             Divider()
@@ -17,24 +20,21 @@ struct SpellCheckServerView: View {
                     .frame(height: 32)
                 
                 Text("Servers")
-                    .font(.system(size: 14, weight: Font.Weight.semibold))
+                    .font(.custom("Poppins-SemiBold", size: 14))
+//                    .font(.system(size: 14, weight: Font.Weight.semibold))
                     .foregroundColor(Color(hex: "747474"))
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()
                     .frame(height: 20)
                 
-               
                 
-                ServerListItemView(serverName: "Server 1", serverDomain: "spellchecker-1.nl.naija.guru", isConnected: true) {
-                    
-                }
-                
-                Spacer()
-                    .frame(height: 10)
-                
-                ServerListItemView(serverName: "Server 2", serverDomain: "spellchecker-1.de.naija.guru", isConnected: false) {
-                    
+                VStack(spacing: 10) {
+                    ForEach(Server.allCases, id: \.rawValue){ server in
+                        ServerListItemView(serverName: server.serverName, serverDomain: server.rawValue, isConnected: settingsVM.currentServer == server) {
+                            settingsVM.connectServer(server: server)
+                        }
+                    }
                 }
                 
                 Spacer()

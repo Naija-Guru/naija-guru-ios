@@ -2,31 +2,33 @@
 //  EnableKeyboardView.swift
 //  naijakeyboard
 //
-//  Created by Hyebreed on 11/08/2024.
+//  Created by Emmanuel Idaresit on 11/08/2024.
 //
 
 import SwiftUI
 
 struct EnableKeyboardView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading)  {
             Spacer()
                 .frame(height: 20)
             
             VStack(alignment: .leading) {
                 Text("Enable the keyboard")
-                    .font(.system(size:16, weight: Font.Weight.semibold))
+                    .font(.custom("CabinetGroteskVariable-Bold_Medium ", size: 18))
+//                    .font(.system(size:16, weight: Font.Weight.semibold))
                     .foregroundColor(AppColors.title)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 20)
                 
                 Spacer()
                     .frame(height: 8)
                 
                 
                 Text("The necessary permissions to run this app.")
-                    .font(.system(size: 14, weight: Font.Weight.regular))
+                    .font(.custom("Poppins-Regular", size: 14))
+//                    .font(.system(size: 14, weight: Font.Weight.regular))
                     .foregroundColor(AppColors.headerSubtitle)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 20)
             }
             
             Spacer()
@@ -49,6 +51,7 @@ struct EnableKeyboardView: View {
                     openSettings()
                 }, label: {
                     Text("Enable")
+                        .font(.custom("Poppins-SemiBold", size: 16))
                         .foregroundColor(.white)
                 })
                 .frame(maxWidth: .infinity)

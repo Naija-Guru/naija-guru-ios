@@ -2,7 +2,7 @@
 //  ServerListItemView.swift
 //  naijakeyboard
 //
-//  Created by Hyebreed on 19/08/2024.
+//  Created by Emmanuel Idaresit on 19/08/2024.
 //
 
 import SwiftUI
@@ -57,7 +57,8 @@ struct ServerListItemView: View {
                     .frame(height: 16)
                 
                 Text(serverName)
-                    .font(.system(size: 20, weight: Font.Weight.bold))
+                    .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 20))
+//                    .font(.system(size: 20, weight: Font.Weight.bold))
                     .foregroundColor(.black)
                     .padding(.horizontal, 24)
                 
@@ -65,7 +66,8 @@ struct ServerListItemView: View {
                     .frame(height: 8)
                 
                 Text(serverDomain)
-                    .font(.system(size: 14, weight: Font.Weight.regular))
+                    .font(.custom("Poppins-Regular", size: 14))
+//                    .font(.system(size: 14, weight: Font.Weight.regular))
                     .foregroundColor(AppColors.serverItemSubtitle)
                     .padding(.horizontal, 24)
                 
@@ -76,6 +78,7 @@ struct ServerListItemView: View {
                     connect()
                 }, label: {
                     Text(isConnected ? "Connected" : "Connect")
+                        .font(.custom("Poppins-Bold", size: 14))
                         .foregroundColor(isConnected ? .white : AppColors.primary)
                 })
                 .frame(maxWidth: .infinity)

@@ -2,14 +2,14 @@
 //  KeyboardViewController.swift
 //  Nigerian Pidgin Keyboard
 //
-//  Created by Hyebreed on 11/08/2024.
+//  Created by Emmanuel Idaresit on 11/08/2024.
 //
 
 import UIKit
 import SwiftUI
 
 class KeyboardViewController: UIInputViewController {
-
+    
     @IBOutlet var nextKeyboardButton: UIButton!
     
     override func updateViewConstraints() {
@@ -35,25 +35,28 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
-        let sentence = "This is an example sentence."
-                let underlinedWord = "example"
-                let replacementWord = "test"
-                
-//                let underlinedSentence = underlineWord(in: sentence, word: underlinedWord, color: .red)
-//                let replacedSentence = replaceWord(in: sentence, targetWord: underlinedWord, replacementWord: replacementWord)
         
         
         // Custom Keyboard
-        let customKeyboardView = NigerianPidginSpellCheckerKeyboard(textDocumentProxy: textDocumentProxy, extensionContext: extensionContext) {
+        
+        DI().initServices()// dependency injection
+        
+        @StateObject var navigationViewModel = NavigationViewModel(openSettings: {
             self.openApp("naijakeyboard://com.naijaguru.naijakeyboard")
-        }
+        })
+        
+        @StateObject var spellCheckerViewModel = SpellCheckerViewModel(textDocumentProxy: self.textDocumentProxy)
+        
+        let customKeyboardView = MainView()
+            .environmentObject(navigationViewModel)
+            .environmentObject(spellCheckerViewModel)
         
         let hostingController = HostingController(rootView: customKeyboardView) //UIHostingController(rootView: customKeyboardView)
         addChild(hostingController)
         view.addSubview(hostingController.view)
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         hostingController.didMove(toParent: self)
-
+        
         // Constraints for SwiftUI view
         NSLayoutConstraint.activate([
             hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
@@ -61,43 +64,27 @@ class KeyboardViewController: UIInputViewController {
             hostingController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
             hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-
+        
         
     }
     
-    // Function to replace a word with another word
-       func replaceWord(targetWord: String, replacementWord: String) {
-           guard let text = textDocumentProxy.documentContextBeforeInput else { return }
-           
-           // Find the word in the existing text
-           let newText = text.replacingOccurrences(of: targetWord, with: replacementWord)
-           
-           // Delete the old text
-           for _ in text {
-               textDocumentProxy.deleteBackward()
-           }
-           
-           // Insert the new text
-           textDocumentProxy.insertText(newText)
-       }
-    
     @objc func openURL(_ url: URL) {
-           return
-        }
+        return
+    }
     
     func openApp(_ urlstring:String) {
-
-           var responder: UIResponder? = self as UIResponder
-           let selector = #selector(openURL(_:))
-           while responder != nil {
-              if responder!.responds(to: selector) && responder != self {
-                 responder!.perform(selector, with: URL(string: urlstring)!)
-                 return
-              }
-              responder = responder?.next
+        
+        var responder: UIResponder? = self as UIResponder
+        let selector = #selector(openURL(_:))
+        while responder != nil {
+            if responder!.responds(to: selector) && responder != self {
+                responder!.perform(selector, with: URL(string: urlstring)!)
+                return
             }
-         }
-
+            responder = responder?.next
+        }
+    }
+    
     
     override func viewWillLayoutSubviews() {
         self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
@@ -120,7 +107,7 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-
+    
 }
 
 class HostingController<Content>: UIHostingController<Content> where Content: View {
@@ -131,10 +118,10 @@ class HostingController<Content>: UIHostingController<Content> where Content: Vi
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if #available(iOS 13.0, *) {
             self.additionalSafeAreaInsets = UIEdgeInsets(top: -self.view.safeAreaInsets.top,
                                                          left: -self.view.safeAreaInsets.left,
