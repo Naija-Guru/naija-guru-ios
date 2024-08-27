@@ -65,7 +65,6 @@ struct Match: Codable, Hashable {
     }
     
     public func hash(into hasher: inout Hasher) {
-        //            hasher.combine(id)
         hasher.combine(message)
         hasher.combine(shortMessage)
         hasher.combine(offset)
@@ -109,7 +108,8 @@ struct Replacement: Codable, Equatable {
 
 // MARK: - Rule
 struct Rule: Codable, Hashable {
-    let id, subID, sourceFile, description: String
+    let id,  description: String
+    let subID, sourceFile : String?
     let issueType: String
     let category: Category
     
