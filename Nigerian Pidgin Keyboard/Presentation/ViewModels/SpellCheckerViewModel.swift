@@ -62,7 +62,13 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
             
             self.textInput = fullText
             //            print("fullText: \(fullText)")
-            if(fullText == self.lastSpellCheckedSentece || fullText.isEmpty) {return}
+            if(fullText == self.lastSpellCheckedSentece) {return}
+            if(fullText.isEmpty){
+                self.textInput = ""
+                self.correctionMatches.removeAll()
+                self.lastSpellCheckedSentece = ""
+                return
+            }
             print("about to call spellCheck")
             Task {
                 await self.spellCheck(fullText)
