@@ -24,26 +24,26 @@ struct NaijaGuruIcon: View {
             .background(KeyboardColours.secondaryColor)
             .clipShape(Circle())
             // Badge
-            if errorCount > 0 {
-                Text(String(errorCount))
-                    .font(.system(size: 14, weight: Font.Weight.medium))
-                    .foregroundColor(.white)
-                    .padding(5)
-                    .background(KeyboardColours.primaryDark)
-                    .clipShape(Circle())
-                    .offset(x: 14, y: -5)
-            }
-            if !hasInternet {
-                ZStack {
-                    Image("wifi_off")
-                        .frame(width: 12, height: 12)
-                        
-                }
-                .frame(width: 18, height: 18)
-                .background(Color(hex: "67877D"))
-                .clipShape(Circle())
-                .offset(x: 14, y: 18)
-            }
+//            if errorCount > 0 {
+//                Text(String(errorCount))
+//                    .font(.system(size: 14, weight: Font.Weight.medium))
+//                    .foregroundColor(.white)
+//                    .padding(5)
+//                    .background(KeyboardColours.primaryDark)
+//                    .clipShape(Circle())
+//                    .offset(x: 14, y: -5)
+//            }
+//            if !hasInternet {
+//                ZStack {
+//                    Image("wifi_off")
+//                        .frame(width: 12, height: 12)
+//                        
+//                }
+//                .frame(width: 18, height: 18)
+//                .background(Color(hex: "67877D"))
+//                .clipShape(Circle())
+//                .offset(x: 14, y: 18)
+//            }
         }
     }
 }
