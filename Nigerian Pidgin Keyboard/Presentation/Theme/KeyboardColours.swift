@@ -11,7 +11,6 @@ import Foundation
 import SwiftUI
 
 class KeyboardColours {
-    //todo: font family
     
     static var primary = Color(hex: "0E3F30")
     static var primaryDark = Color(hex:"0E3F30")
@@ -24,9 +23,9 @@ class KeyboardColours {
     static var correctSpelling = Color(hex: "335DE3")
     
 
-    static var dividerColor =  Color(hex: "545458")//.withOpacity(.56);
+    static var dividerColor =  Color(hex: "545458")
 
-    static var subTitle =  Color(hex: "EBEBF5")//.withOpacity(.6);
+    static var subTitle =  Color(hex: "EBEBF5")
 
     static var buttonGray = Color(hex: "242424")
     

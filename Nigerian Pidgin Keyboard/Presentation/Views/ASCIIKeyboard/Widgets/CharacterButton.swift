@@ -28,6 +28,6 @@ struct CharacterButton: View {
     }
 }
 
-//#Preview {
-//    CharacterButton()
-//}
+#Preview {
+    CharacterButton(title: "B", insertText: {_ in })
+}

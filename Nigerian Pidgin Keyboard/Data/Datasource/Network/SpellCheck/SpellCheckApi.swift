@@ -8,13 +8,12 @@
 import Foundation
 
 protocol SpellCheckApi {
-    func spellCheck(text : String) async throws -> [Match]
+    func spellCheck(text : String, baseURL : String) async throws -> [Match]
 }
 
 class SpellCheckApiImpl : SpellCheckApi {
-    
-    func spellCheck(text : String) async throws -> [Match] {
-        let url = URL(string: "\(ApiClient.shared.baseURL)v2/check?language=pcm-NG&text=\(text)")!
+    func spellCheck(text : String, baseURL : String ) async throws -> [Match] {
+        let url = URL(string: "\(baseURL)v2/check?language=pcm-NG&text=\(text)")!
         print("url: \(url.absoluteURL)")
         let (data, _) = try await URLSession.shared.data(from: url)
         

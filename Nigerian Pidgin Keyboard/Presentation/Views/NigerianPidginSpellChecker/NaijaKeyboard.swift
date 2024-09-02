@@ -60,6 +60,7 @@ struct NaijaKeyboard: View {
                     .padding(.leading, 12)
                     .onTapGesture {
                         navigationVM.toggleNaijaKeyboard()
+                        spellCheckerVM.naijakeyboardISShowing = false
                     }
                 
                 
@@ -67,7 +68,6 @@ struct NaijaKeyboard: View {
                 
                 Text("\(spellCheckerVM.correctionMatches.count) writing \(spellCheckerVM.correctionMatches.count == 1 ? "issue" : "issues") found")
                     .font(.custom("Poppins-Regular", size: 14))
-//                    .font(.system(size: 14))
                     .foregroundColor(Color(hex:"8E8E93"))
                 Spacer()
                 
@@ -84,16 +84,6 @@ struct NaijaKeyboard: View {
     }//view
 }
 
-//#Preview {
-//    NaijaKeyboard()
-//}
-
-struct RoundedCornersShape: Shape {
-    var corners: UIRectCorner
-    var radius: CGFloat
-    
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
-    }
+#Preview {
+    NaijaKeyboard()
 }

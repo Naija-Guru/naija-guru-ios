@@ -39,8 +39,6 @@ struct NumbersAndSymbols: View {
                 }
             }
 
-
-
             HStack(spacing: spacing) {
                 ForEach((isNumberLockOn ?numberAndSymbols : moreSymbols)[1], id: \.self) { key in
                     CharacterButton(title: key, width: numberWidth, insertText: insertText)
@@ -76,6 +74,6 @@ struct NumbersAndSymbols: View {
     }
 }
 
-//#Preview {
-//    NumbersAndSymbols()
-//}
+#Preview {
+    NumbersAndSymbols(spacing: 33, verticalSpace: 44, insertText: {_ in }, backSpace: {})
+}

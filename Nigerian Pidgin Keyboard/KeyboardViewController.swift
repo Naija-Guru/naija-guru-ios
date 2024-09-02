@@ -65,8 +65,11 @@ class KeyboardViewController: UIInputViewController {
             hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
+        // Custom Keyboard end
         
     }
+    
+    // My custom functions
     
     @objc func openURL(_ url: URL) {
         return
@@ -84,6 +87,8 @@ class KeyboardViewController: UIInputViewController {
             responder = responder?.next
         }
     }
+    
+    // My custom functions end
     
     
     override func viewWillLayoutSubviews() {

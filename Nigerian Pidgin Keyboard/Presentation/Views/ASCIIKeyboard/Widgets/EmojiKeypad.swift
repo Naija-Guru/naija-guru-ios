@@ -25,18 +25,9 @@ struct EmojiKeypad: View {
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-    // smiles and people =
-    // animals and nature = pawprint.fill or teddybear
-    // food and drink = birthday.cake
-    // activity = soccerball
-    // travel & places
-    // objects
-    // symbols
-    // flags
     
     @State private var currentIndex: Int = 0
     
-//    let items = Array(0..<100)
     var body: some View {
         VStack(spacing: 2){
             Spacer().frame(height: 10)
@@ -160,14 +151,13 @@ extension EmojiCategory : Hashable {
     }
     
     public func hash(into hasher: inout Hasher) {
-//            hasher.combine(id)
             hasher.combine(name)
             hasher.combine(values)
         }
     
 }
 
-//#Preview {
-//    Emojis()
-//}
+#Preview {
+    EmojiKeypad(showAlphabetKeyboard: {}, insertText: {_ in}, backSpace: {})
+}
 

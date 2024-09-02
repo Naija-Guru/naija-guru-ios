@@ -74,12 +74,10 @@ struct Alphabets: View {
                     .background( (!shouldShowUpperCase ? false : true) ? Color(hex: "ABB1BA") : Color.white)
                     .cornerRadius(5)
                     .shadow(color: Color(hex: "888A8D"), radius: 0.5, x: 0, y: 1)
-                    .onTapGesture(count: 2) {
-//                        print("on double tap called")
+                    .onTapGesture(count: 2) {//double tap
                         isCapslockOn = !isCapslockOn
                     }
-                    .onTapGesture {
-//                        print("on single tap called")
+                    .onTapGesture {//single tap
                         isShiftKeyOn = !isShiftKeyOn
                         isCapslockOn = false
                     }
@@ -110,6 +108,6 @@ struct Alphabets: View {
     }
 }
 
-//#Preview {
-//    Alphabets()
-//}
+#Preview {
+    Alphabets(spacing: 33, verticalSpace: 44, insertText: {_ in }, backSpace: {})
+}

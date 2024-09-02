@@ -24,7 +24,6 @@
 		CE75743E2C696AB500B1E9CE /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */; };
 		CE7574422C696AB500B1E9CE /* Nigerian Pidgin Keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE75743B2C696AB400B1E9CE /* Nigerian Pidgin Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE7574482C69759900B1E9CE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574472C69759900B1E9CE /* MainView.swift */; };
-		CE75744A2C69790200B1E9CE /* KeyboardTestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574492C69790200B1E9CE /* KeyboardTestUI.swift */; };
 		CE75744F2C699A0E00B1E9CE /* ASCIIKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */; };
 		CE7574522C699A4F00B1E9CE /* NumbersAndSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */; };
 		CE7574542C699A8800B1E9CE /* CharacterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574532C699A8800B1E9CE /* CharacterButton.swift */; };
@@ -80,6 +79,9 @@
 		CED50DAD2C7BEE2000B5D877 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D8A2C7BEE2000B5D877 /* Poppins-Black.ttf */; };
 		CED50DAE2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D8B2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf */; };
 		CED50DAF2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D8B2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf */; };
+		CED50DB12C83E84200B5D877 /* ServerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50DB02C83E84200B5D877 /* ServerTextField.swift */; };
+		CED50DB42C83F37800B5D877 /* QuickFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50DB32C83F37800B5D877 /* QuickFunctions.swift */; };
+		CED50DB72C85D7F800B5D877 /* RoundedRectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50DB62C85D7F700B5D877 /* RoundedRectangleShape.swift */; };
 		CEDEB9392C791B790042346C /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9382C791B790042346C /* NavigationViewModel.swift */; };
 		CEDEB93B2C7920470042346C /* SpellCheckerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB93A2C7920470042346C /* SpellCheckerViewModel.swift */; };
 		CEDEB93F2C793E3E0042346C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB93E2C793E3E0042346C /* ApiClient.swift */; };
@@ -137,7 +139,6 @@
 		CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		CE75743F2C696AB500B1E9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7574472C69759900B1E9CE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		CE7574492C69790200B1E9CE /* KeyboardTestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTestUI.swift; sourceTree = "<group>"; };
 		CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASCIIKeyboard.swift; sourceTree = "<group>"; };
 		CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersAndSymbols.swift; sourceTree = "<group>"; };
 		CE7574532C699A8800B1E9CE /* CharacterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterButton.swift; sourceTree = "<group>"; };
@@ -175,6 +176,9 @@
 		CED50D892C7BEE2000B5D877 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		CED50D8A2C7BEE2000B5D877 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		CED50D8B2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CED50DB02C83E84200B5D877 /* ServerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTextField.swift; sourceTree = "<group>"; };
+		CED50DB32C83F37800B5D877 /* QuickFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFunctions.swift; sourceTree = "<group>"; };
+		CED50DB62C85D7F700B5D877 /* RoundedRectangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleShape.swift; sourceTree = "<group>"; };
 		CEDEB9382C791B790042346C /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		CEDEB93A2C7920470042346C /* SpellCheckerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckerViewModel.swift; sourceTree = "<group>"; };
 		CEDEB93E2C793E3E0042346C /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				CE74F0892C72BD4100BE305B /* ServerListItemView.swift */,
+				CED50DB02C83E84200B5D877 /* ServerTextField.swift */,
 			);
 			path = widgets;
 			sourceTree = "<group>";
@@ -245,8 +250,9 @@
 		CE7574122C692FB700B1E9CE /* naijakeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				CE7574242C69325700B1E9CE /* Theme */,
 				CE7574672C6B0E4600B1E9CE /* Assets */,
+				CED50DB22C83F36300B5D877 /* Utilities */,
+				CE7574242C69325700B1E9CE /* Theme */,
 				CED50D6C2C7BC93800B5D877 /* Models */,
 				CE7574232C69319000B1E9CE /* Views */,
 				CE7574732C6BAC7800B1E9CE /* ViewModels */,
@@ -273,7 +279,6 @@
 				CE74F0852C72B98100BE305B /* SpellCheckServers */,
 				CE7574312C69575100B1E9CE /* Settings */,
 				CE7574292C69434F00B1E9CE /* Home */,
-				CE7574492C69790200B1E9CE /* KeyboardTestUI.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -472,9 +477,26 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		CED50DB22C83F36300B5D877 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CED50DB32C83F37800B5D877 /* QuickFunctions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CED50DB52C85D7D100B5D877 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				CED50DB62C85D7F700B5D877 /* RoundedRectangleShape.swift */,
+			);
+			path = SharedViews;
+			sourceTree = "<group>";
+		};
 		CEDEB9312C7914C60042346C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CED50DB52C85D7D100B5D877 /* SharedViews */,
 				CED50D6F2C7BDAFF00B5D877 /* Utilities */,
 				CEDEB9372C791A1F0042346C /* ViewModels */,
 				CE7574552C699AB400B1E9CE /* Theme */,
@@ -739,16 +761,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED50DB12C83E84200B5D877 /* ServerTextField.swift in Sources */,
 				CE75742E2C694C3200B1E9CE /* EnableKeyboardView.swift in Sources */,
 				CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */,
 				CE7574332C69576000B1E9CE /* SettingsView.swift in Sources */,
 				CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */,
-				CE75744A2C69790200B1E9CE /* KeyboardTestUI.swift in Sources */,
 				CE74F0872C72B9AF00BE305B /* SpellCheckServerView.swift in Sources */,
 				CE7574282C693BBE00B1E9CE /* AppDimensions.swift in Sources */,
 				CE7574222C69318200B1E9CE /* HomeView.swift in Sources */,
 				CE7574142C692FB700B1E9CE /* naijakeyboardApp.swift in Sources */,
 				CE7574362C6960C400B1E9CE /* SettingsListItem.swift in Sources */,
+				CED50DB42C83F37800B5D877 /* QuickFunctions.swift in Sources */,
 				CED50D6E2C7BC9B000B5D877 /* Server.swift in Sources */,
 				CE7574262C69327300B1E9CE /* AppColours.swift in Sources */,
 				CE74F08A2C72BD4100BE305B /* ServerListItemView.swift in Sources */,
@@ -778,6 +801,7 @@
 				CE7574592C699B3100B1E9CE /* SpecialButton.swift in Sources */,
 				CEDEB9562C79732F0042346C /* SpellCheckMatchView.swift in Sources */,
 				CE75745B2C699B8900B1E9CE /* Alphabets.swift in Sources */,
+				CED50DB72C85D7F800B5D877 /* RoundedRectangleShape.swift in Sources */,
 				CEDEB9412C7942FE0042346C /* SpellCheckResponse.swift in Sources */,
 				CEDEB93F2C793E3E0042346C /* ApiClient.swift in Sources */,
 				CEDEB93B2C7920470042346C /* SpellCheckerViewModel.swift in Sources */,

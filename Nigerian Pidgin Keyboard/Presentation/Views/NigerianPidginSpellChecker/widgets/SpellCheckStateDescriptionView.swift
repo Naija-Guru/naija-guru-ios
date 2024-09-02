@@ -17,7 +17,6 @@ struct SpellCheckStateDescriptionView: View {
         VStack {
             Text(text)
                 .font(.custom("Poppins-Regular", size: 14))
-//                .font(.system(size: 16))
                 .foregroundColor(.black)
             
             Spacer()
@@ -30,6 +29,6 @@ struct SpellCheckStateDescriptionView: View {
     }
 }
 
-//#Preview {
-//    SpellCheckStateDescriptionView()
-//}
+#Preview {
+    SpellCheckStateDescriptionView(text: "Good job!", image: "wifi_off")
+}

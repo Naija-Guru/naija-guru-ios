@@ -16,7 +16,6 @@ struct EnableKeyboardView: View {
             VStack(alignment: .leading) {
                 Text("Enable the keyboard")
                     .font(.custom("CabinetGroteskVariable-Bold_Medium ", size: 18))
-//                    .font(.system(size:16, weight: Font.Weight.semibold))
                     .foregroundColor(AppColors.title)
                     .padding(.horizontal, 20)
                 
@@ -26,7 +25,6 @@ struct EnableKeyboardView: View {
                 
                 Text("The necessary permissions to run this app.")
                     .font(.custom("Poppins-Regular", size: 14))
-//                    .font(.system(size: 14, weight: Font.Weight.regular))
                     .foregroundColor(AppColors.headerSubtitle)
                     .padding(.horizontal, 20)
             }

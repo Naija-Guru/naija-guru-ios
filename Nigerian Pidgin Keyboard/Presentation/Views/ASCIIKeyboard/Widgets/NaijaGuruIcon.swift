@@ -10,6 +10,7 @@ import SwiftUI
 struct NaijaGuruIcon: View {
     
     var errorCount : Int = 0
+    var hasInternet : Bool
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -32,10 +33,21 @@ struct NaijaGuruIcon: View {
                     .clipShape(Circle())
                     .offset(x: 14, y: -5)
             }
+            if !hasInternet {
+                ZStack {
+                    Image("wifi_off")
+                        .frame(width: 12, height: 12)
+                        
+                }
+                .frame(width: 18, height: 18)
+                .background(Color(hex: "67877D"))
+                .clipShape(Circle())
+                .offset(x: 14, y: 18)
+            }
         }
     }
 }
 
 #Preview {
-    NaijaGuruIcon()
+    NaijaGuruIcon(hasInternet: true)
 }
