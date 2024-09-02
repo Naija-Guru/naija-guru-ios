@@ -2,7 +2,7 @@
 //  RoundedRectangleShape.swift
 //  Nigerian Pidgin Keyboard
 //
-//  Created by Hyebreed on 02/09/2024.
+//  Created by Emmanuel Idaresit on 02/09/2024.
 //
 
 import Foundation
