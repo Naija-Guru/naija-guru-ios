@@ -12,10 +12,6 @@ struct MainView: View {
     @EnvironmentObject private var navigationVM : NavigationViewModel
     @EnvironmentObject private var spellCheckerVM : SpellCheckerViewModel
 
-//    init(textDocumentProxy: UITextDocumentProxy, openSettings: @escaping () -> Void) {
-//        self.spellCheckerViewModel.setTextDocumntProxy(textDocumentProxy: textDocumentProxy)
-//        self.navigationViewModel.openSettings = openSettings
-//    }
     
     
     var body: some View {
@@ -36,8 +32,6 @@ struct MainView: View {
     }
 }
 
-//#Preview {
-//    NigerianPidginSpellCheckerKeyboard { text in
-//
-//    }
-//}
+#Preview {
+    MainView()
+}

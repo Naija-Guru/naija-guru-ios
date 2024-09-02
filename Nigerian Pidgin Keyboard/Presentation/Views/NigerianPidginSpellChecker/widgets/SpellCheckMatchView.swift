@@ -18,9 +18,8 @@ struct SpellCheckMatchView: View {
             VStack(alignment: .leading) {
                 HStack(alignment: .top) {
                     Image("bulls_eye")
-                    Text("Correctness · Spelling")
+                    Text("Correctness · \(match.rule.category.name)")
                         .font(.custom("Poppins-Regular", size: 12))
-//                        .font(.system(size: 12, weight: .regular))
                         .foregroundColor(Color(hex:"84888A"))
                     Spacer()
                 }
@@ -30,7 +29,6 @@ struct SpellCheckMatchView: View {
                 ZStack {
                     Text(match.replacements.first?.value ?? "")
                         .font(.custom("CabinetGroteskVariable-Bold_Medium", size: 24))
-//                        .font(.system(size: 20, weight: .medium))
                         .foregroundColor(.white)
                         .padding(.vertical, 4)
                         .padding(.horizontal, 10)
@@ -45,7 +43,6 @@ struct SpellCheckMatchView: View {
                 ScrollView {
                     Text(match.message)
                         .font(.custom("Poppins-Regular", size: 16))
-//                        .font(.system(size: 16, weight: .regular))
                         .foregroundColor(.black)
                         .padding(.horizontal, 12)
                 }
@@ -57,7 +54,6 @@ struct SpellCheckMatchView: View {
                     Button(action: onIgnore) {
                         Text("Ignore")
                             .font(.custom("Poppins-Medium", size: 14))
-//                            .font(.system(size: 16, weight: .medium))
                             .foregroundColor(Color(hex: "8E8E93"))
                             .padding(.vertical, 10)
                             .padding(.horizontal, 19)
@@ -66,7 +62,6 @@ struct SpellCheckMatchView: View {
                     Button(action: onAccept) {
                         Text("Accept")
                             .font(.custom("Poppins-Medium", size: 14))
-//                            .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.white)
                             .padding(.vertical, 10)
                             .padding(.horizontal, 19)
@@ -91,5 +86,5 @@ struct SpellCheckMatchView: View {
 }
 
 //#Preview {
-//    SpellCheckMatchView()
+//    SpellCheckMatchView(match: Match(from: JSONDecoder() as! Decoder), onAccept: {}, onIgnore: {})
 //}

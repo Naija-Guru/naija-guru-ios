@@ -9,15 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-//    @State private var navigateToPage = false
-//    init(){
-//        for familyName in UIFont.familyNames {
-//            print(familyName)
-//            for fontName in UIFont.fontNames(forFamilyName: familyName) {
-//                print("-- \(fontName)")
-//            }
-//        }
-//    }
     var body: some View {
         
         VStack{
@@ -27,14 +18,11 @@ struct HomeView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 77, height: 92)
 
-            //
             Spacer()
                 .frame(height: 30)
             
             Text("Welcome to Naija Keyboard")
                 .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 26))
-            
-//                .font(.system(size: 26, weight: Font.Weight.semibold))
                 .foregroundColor(AppColors.primary)
             
             Spacer()
@@ -43,7 +31,6 @@ struct HomeView: View {
             
             Text("Get your Naija Pidgin grammar on point...")
                 .font(.custom("CabinetGroteskVariable-Bold_Regular", size: 18))
-//                .font(.system(size: 18, weight: Font.Weight.regular))
                 .foregroundColor(AppColors.headerSubtitle)
             
             Spacer()
@@ -70,7 +57,6 @@ struct HomeView: View {
                     
                     Text("Settings")
                         .font(.custom("CabinetGroteskVariable-Bold_Medium", size: 18))
-//                        .font(.system(size: 16, weight: Font.Weight.semibold))
                         .foregroundColor(Color(hex:"292C32"))
                     
                 }

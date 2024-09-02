@@ -9,7 +9,12 @@ import SwiftUI
 
 struct SpellCheckServerView: View {
     
+    @Environment(\.dismiss) var dismiss
     @EnvironmentObject private var settingsVM : SettingsViewModel
+    
+    @State var primaryURL : String = ""
+    
+    @State var secondaryURL : String = ""
     
     var body: some View {
         VStack(alignment: .leading){
@@ -21,25 +26,60 @@ struct SpellCheckServerView: View {
                 
                 Text("Servers")
                     .font(.custom("Poppins-SemiBold", size: 14))
-//                    .font(.system(size: 14, weight: Font.Weight.semibold))
                     .foregroundColor(Color(hex: "747474"))
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()
                     .frame(height: 20)
                 
+                Text("Primary Server")
+                    .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 18))
+                    .foregroundColor(Color(hex: "171A19"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 
-                VStack(spacing: 10) {
-                    ForEach(Server.allCases, id: \.rawValue){ server in
-                        ServerListItemView(serverName: server.serverName, serverDomain: server.rawValue, isConnected: settingsVM.currentServer == server) {
-                            settingsVM.connectServer(server: server)
-                        }
-                    }
-                }
+                ServerTextField(url: $primaryURL)
                 
                 Spacer()
+                    .frame(height: 32)
+                
+                Text("Secondary Server")
+                    .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 18))
+                    .foregroundColor(Color(hex: "171A19"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                ServerTextField(url: $secondaryURL)
+                
+                
+                Spacer()
+                
+                Button(action: {
+                    if(primaryURL == settingsVM.primaryServer &&
+                       secondaryURL == settingsVM.secondaryServer) {return}
+                    
+                    if isValidURL(primaryURL) && isValidURL(secondaryURL) {
+                        settingsVM.saveServers(primaryURL: primaryURL, secondaryURL: secondaryURL)
+                        dismiss()// navigate back
+                    }
+                    
+                }
+                       , label: {
+                    Text("Save")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .background(primaryURL == settingsVM.primaryServer &&
+                                    secondaryURL == settingsVM.secondaryServer ? .gray : AppColors.primary)
+                        .clipShape(RoundedCornersShape(corners: .allCorners, radius: 10))
+                })
+                                   
+                Spacer()
+                    .frame(height: 10)
             }.padding(.horizontal, AppDimensions.pageMargin)
         }.navigationTitle("Spell Check Servers")
+            .onAppear {
+                primaryURL = settingsVM.primaryServer
+                secondaryURL = settingsVM.secondaryServer
+            }
     }
 }
 

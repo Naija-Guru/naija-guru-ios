@@ -58,7 +58,6 @@ struct ServerListItemView: View {
                 
                 Text(serverName)
                     .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 20))
-//                    .font(.system(size: 20, weight: Font.Weight.bold))
                     .foregroundColor(.black)
                     .padding(.horizontal, 24)
                 
@@ -67,7 +66,6 @@ struct ServerListItemView: View {
                 
                 Text(serverDomain)
                     .font(.custom("Poppins-Regular", size: 14))
-//                    .font(.system(size: 14, weight: Font.Weight.regular))
                     .foregroundColor(AppColors.serverItemSubtitle)
                     .padding(.horizontal, 24)
                 

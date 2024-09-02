@@ -19,7 +19,6 @@ struct SettingsView: View {
                 
                 Text("General")
                     .font(.custom("Poppins-SemiBold", size: 14))
-//                    .font(.system(size: 14, weight: Font.Weight.semibold))
                     .foregroundColor(Color(hex: "747474"))
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -39,6 +38,9 @@ struct SettingsView: View {
                     SettingsListItem(image: "server", title: "Spell Check Servers", subTitle: "Change spell check servers")
                 })
                 
+                Spacer()
+                    .frame(height: 24)
+                
                 Divider()
                 
                 Spacer()
@@ -48,15 +50,11 @@ struct SettingsView: View {
                     SettingsListItem(image: "share_feedback", title: "Share Feedback", subTitle: "We'd love to hear from you")
                 })
                 
-//                Link
-                
                 Spacer()
             }
             .padding(.horizontal, AppDimensions.pageMargin)
         }
         .navigationTitle("Settings")
-        
-//        .frame(maxWidth: .infinity ,maxHeight: .infinity ).background(.yellow)
     }
 }
 

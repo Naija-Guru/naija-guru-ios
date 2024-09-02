@@ -174,38 +174,3 @@ struct Software: Codable {
 struct Warnings: Codable {
     let incompleteResults: Bool
 }
-
-
-//{
-//           "message": "Spelling of English personal pronoun \"them\" for Naija na \"dem\".",
-//           "shortMessage": "",
-//           "replacements": [
-//               {
-//                   "value": "dem"
-//               }
-//           ],
-//           "offset": 0,
-//           "length": 4,
-//           "context": {
-//               "text": "them talk say wahala dey",
-//               "offset": 0,
-//               "length": 4
-//           },
-//           "sentence": "them talk say wahala dey",
-//           "type": {
-//               "typeName": "Other"
-//           },
-//           "rule": {
-//               "id": "PERSONAL_PRONOUNS_MISSPELLING",
-//               "subId": "9",
-//               "sourceFile": "grammar.xml",
-//               "description": "Check sey spelling of personal pronouns dey correct",
-//               "issueType": "uncategorized",
-//               "category": {
-//                   "id": "ORTHOGRAPHIC_ERRORS",
-//                   "name": "Orthographic Errors"
-//               }
-//           },
-//           "ignoreForIncompleteSentence": false,
-//           "contextForSureMatch": 0
-//       },

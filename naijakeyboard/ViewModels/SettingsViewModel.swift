@@ -9,7 +9,8 @@ import Foundation
 
 class SettingsViewModel : ObservableObject {
     
-    @Published var currentServer : Server = Server.s1
+    @Published var primaryServer : String = Server.s1.serverURL
+    @Published var secondaryServer : String = Server.s2.serverURL
     
     init(){
         loadPreferences()
@@ -18,28 +19,47 @@ class SettingsViewModel : ObservableObject {
     func loadPreferences(){
         
         //Server
-        currentServer = getCurrentServer()
+        primaryServer = getPrimaryServer()
+        secondaryServer = getSecondaryServer()
     }
     
-    
-    func getCurrentServer() -> Server {
+    func getPrimaryServer() -> String {
         if let sharedDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
-            if let result = sharedDefaults.string(forKey: "server"){
-                return Server.fromURL(result)
+            if let result = sharedDefaults.string(forKey: "primary_server"){
+                return result
             }
-            return Server.s1
+            return Server.s1.serverURL
         }
-        return Server.s1
-    }//
-    
-    func connectServer(server : Server){
-        
-        if let sharedDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
-            sharedDefaults.setValue(server.serverURL, forKey: "server")
-        }
-        
-        currentServer = getCurrentServer()
+        return Server.s1.serverURL
     }
+    
+    func getSecondaryServer() -> String {
+        if let sharedDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
+            if let result = sharedDefaults.string(forKey: "secondary_server"){
+                return result
+            }
+            return Server.s2.serverURL
+        }
+        return Server.s2.serverURL
+    }
+    
+    func saveServers(primaryURL : String, secondaryURL : String){
+        var primary = primaryURL.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !primary.hasSuffix("/") {  primary += "/"}
+        var secondary = secondaryURL.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !secondary.hasSuffix("/") {  secondary += "/"}
+        
+        if (primary != primaryServer || secondary != secondaryServer){
+            if let sharedDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
+                sharedDefaults.setValue(primary, forKey: "primary_server")
+                sharedDefaults.setValue(secondary, forKey: "secondary_server")
+            }
+            
+            primaryServer = getPrimaryServer()
+            secondaryServer = getSecondaryServer()
+        }
+    }
+
     
 }
 

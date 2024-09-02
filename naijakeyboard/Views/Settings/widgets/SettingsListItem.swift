@@ -34,7 +34,6 @@ struct SettingsListItem: View {
             VStack{
                 Text(title)
                     .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 18))
-//                    .font(.system(size: 16, weight: Font.Weight.semibold))
                     .foregroundColor(AppColors.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -43,7 +42,6 @@ struct SettingsListItem: View {
                 
                 Text(subTitle)
                     .font(.custom("Poppins-Regular", size: 14))
-//                    .font(.system(size: 14, weight: Font.Weight.regular))
                     .foregroundColor(AppColors.listItemSubtitle)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }

@@ -31,23 +31,98 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     }
     
     
-//    func moveCursorAfterWord(_ word: String) {
-//        guard let documentContextBeforeInput = textDocumentProxy.documentContextBeforeInput else {
-//            return
-//        }
-//
-//        // Find the range of the word in the text before the current input
-//        if let range = documentContextBeforeInput.range(of: word, options: .backwards) {
-//            // Calculate the number of characters to move the cursor to the end of the word
-//            let distance = documentContextBeforeInput.distance(from: documentContextBeforeInput.endIndex, to: range.upperBound)
-//            
-//            // Move the cursor to the end of the word
-//            textDocumentProxy.adjustTextPosition(byCharacterOffset: distance)
-//        }
-//    }
     
-    // MARK: Listen for test updates
+    // MARK: retrieved text from text field and move cursor
+    
+    private var pauseLoop = false // pauses the listen for text changes timer
+    
+    private func moveCursorToEndOfSentence() {
+        // Check if there's any text after the current cursor position
+        if let documentContextAfterInput = textDocumentProxy.documentContextAfterInput {
+            // Move the cursor forward by the length of the text after the current position
+            let charactersToMove = documentContextAfterInput.count
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: charactersToMove)
+        }
+    }
+    
+      
+    private func moveCursorToEndOfFullDocumentContext(){
+        pauseLoop = true // to stop the searchTimer from scanning the document
+        searchThread.suspend() // to release values in the search thread to be used in this thread
+        
+        
+        var after = self.textDocumentProxy.documentContextAfterInput
+        while (after != nil && !after!.isEmpty){
+            
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: after?.count ?? 0)
+            Thread.sleep(forTimeInterval: 0.01)
+            after = textDocumentProxy.documentContextAfterInput
+        }
+        
+        pauseLoop = false
+        searchThread.resume()
+    }
+    
+    private func currentSentence() -> String {
+        let textBeforeCursor = textDocumentProxy.documentContextBeforeInput ?? ""
+        let selectedText = textDocumentProxy.selectedText ?? ""
+        let textAfterCursor = textDocumentProxy.documentContextAfterInput ?? ""
+        
+        let fullSentence = "\(textBeforeCursor)\(selectedText)\(textAfterCursor)"
+        return fullSentence
+    }
+
+    
+    private func fullDocumentContext() -> String {
+        let textDocumentProxy = self.textDocumentProxy
+
+        var before = textDocumentProxy.documentContextBeforeInput
+
+        var completePriorString = "";
+        
+        // Grab everything before the cursor
+        while (before != nil && !before!.isEmpty) {
+            completePriorString = before! + completePriorString
+            
+            let length = (before?.count ?? 1)
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: -length)
+            Thread.sleep(forTimeInterval: 0.01)
+            before = textDocumentProxy.documentContextBeforeInput
+        }
+        
+        // Move the cursor back to the original position
+        self.textDocumentProxy.adjustTextPosition(byCharacterOffset: completePriorString.count)
+        Thread.sleep(forTimeInterval: 0.01)
+
+        var after = textDocumentProxy.documentContextAfterInput
+
+        var completeAfterString = "";
+        
+        // Grab everything after the cursor
+        while (after != nil && !after!.isEmpty) {
+            completeAfterString += after!
+
+            let length = after!.lengthOfBytes(using: String.Encoding(rawValue: NSUTF8StringEncoding))
+
+            textDocumentProxy.adjustTextPosition(byCharacterOffset: length)
+            Thread.sleep(forTimeInterval: 0.01)
+            after = textDocumentProxy.documentContextAfterInput
+        }
+
+        // Go back to the original cursor position
+        self.textDocumentProxy.adjustTextPosition(byCharacterOffset: -(completeAfterString.count))
+
+        let completeString = completePriorString + completeAfterString
+
+        return completeString
+    }
+    
+
+    
+    // MARK: Listen for text updates
     private var textTimer : Timer?
+    private var searchThread = DispatchQueue(label: "com.naija.keyboard1")
+    var naijakeyboardISShowing = false
     
     private func listenForTextChanges(){
         print("--- started listening for Text Changes()")
@@ -55,24 +130,8 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
         textTimer = nil
         
         textTimer = Timer(timeInterval: 3, repeats: true, block: { timer in
-            let precedingText = self.textDocumentProxy.documentContextBeforeInput ?? ""
-            let followingText = self.textDocumentProxy.documentContextAfterInput ?? ""
-            let selectedText = self.textDocumentProxy.selectedText ?? ""
-            let fullText = "\(precedingText)\(selectedText)\(followingText)".trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            self.textInput = fullText
-            //            print("fullText: \(fullText)")
-            if(fullText == self.lastSpellCheckedSentece) {return}
-            if(fullText.isEmpty){
-                self.textInput = ""
-                self.correctionMatches.removeAll()
-                self.lastSpellCheckedSentece = ""
-                return
-            }
-            print("about to call spellCheck")
-            Task {
-                await self.spellCheck(fullText)
-            }
+            self.processNewText()
+
         })
         
         if let timer = textTimer {
@@ -80,12 +139,39 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
         }
     }
     
+    private func processNewText(){
+        searchThread.async {
+            if (self.pauseLoop) {return}
+            let text = self.naijakeyboardISShowing ? self.fullDocumentContext() : self.currentSentence()
+            
+            DispatchQueue.main.async {
+                self.textInput = text
+                
+                if(text == self.lastSpellCheckedSentece) {return}
+                if(text.isEmpty){
+                    self.textInput = ""
+                    self.correctionMatches.removeAll()
+                    self.lastSpellCheckedSentece = ""
+                    return
+                }
+                print("about to call spellCheck")
+                Task {
+                    await self.spellCheck(text)
+                }
+            }
+            
+        }
+    }//processNewText
+    
+   
+    
     // MARK: Check internet connection
     
     @Published var hasInternet : Bool = true
     
     func listenForInternetConnection(){
         NetworkMonitor.shared.startMonitoring { hasInternet in
+            print("has internet connection : \(hasInternet)")
             self.hasInternet = hasInternet
         }
     }
@@ -115,20 +201,18 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
                            let endIndex = myText.index(startIndex, offsetBy: length, limitedBy: myText.endIndex) {
                             // Extract the substring
                             let substring = myText[startIndex..<endIndex]
-                            //                            print("substring is: \(substring)")  // Output: "say"
                             
                             return match.copy(wordToBeReplace: String(substring))
                             
                             
                         }else{
-                            print("else called")
                             return match
                         }
                         
                     })
                     self.lastSpellCheckedSentece = text
                     print(self.correctionMatches)
-                    
+
                 }
             }
             
@@ -140,7 +224,6 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     }
     
     func replaceWithMatch(match : Match){
-        moveCursorToEndOfText()
                 print("replaceWithMatch called")
         guard let targetWord = match.wordToBeReplaced else {return}
                 print("targetWord acquired : \(targetWord)")
@@ -152,45 +235,39 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     }
     
     func ignoreMatch(match : Match) {
-        
         removeMatchFromList(match: match)
+        // todo: ignore rules
     }
     
     private func removeMatchFromList(match : Match) {
-        //        print("ignoreMatch has been called")
         guard let index = correctionMatches.firstIndex(of: match) else { return }
         correctionMatches.remove(at: index)
     }
     
-    func moveCursorToEndOfText() {
-        // Check if there's any text after the current cursor position
-        if let documentContextAfterInput = textDocumentProxy.documentContextAfterInput {
-            // Move the cursor forward by the length of the text after the current position
-            let charactersToMove = documentContextAfterInput.count
-            textDocumentProxy.adjustTextPosition(byCharacterOffset: charactersToMove)
-        }
-    }
     
     // Function to replace a word with another word
     private func replaceWord(targetWord: String, replacementWord: String) {
-        moveCursorToEndOfText()
-//        moveCursorAfterWord(targetWord)
-        let precedingText = self.textDocumentProxy.documentContextBeforeInput ?? ""
-        let followingText = self.textDocumentProxy.documentContextAfterInput ?? ""
-        let selectedText = self.textDocumentProxy.selectedText ?? ""
-        let text = "\(precedingText)\(selectedText)\(followingText)"//.trimmingCharacters(in: .whitespacesAndNewlines)
-//        guard let text = textDocumentProxy.documentContextBeforeInput else { return }
-        
-        // Find the word in the existing text
-        let newText = text.replacingOccurrences(of: targetWord, with: replacementWord)
-        
-        // Delete the old text
-        for _ in text {
-            textDocumentProxy.deleteBackward()
+        DispatchQueue(label: "com.naija.keyboard1").async {
+            self.naijakeyboardISShowing ? self.moveCursorToEndOfFullDocumentContext() : self.moveCursorToEndOfSentence()
+            
+            DispatchQueue.main.async {
+                
+                let text =  self.textInput
+                print("before replacement: \(text)")
+                // Find the word in the existing text
+                let newText = text.replacingOccurrences(of: targetWord, with: replacementWord)
+                
+                print("after replacement: \(newText)")
+                // Delete the old text
+                for _ in text {
+                    self.textDocumentProxy.deleteBackward()
+                }
+                
+                // Insert the new text
+                self.textDocumentProxy.insertText(newText)
+            }
         }
         
-        // Insert the new text
-        textDocumentProxy.insertText(newText)
     }
     
 }

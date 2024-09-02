@@ -28,9 +28,9 @@ class AppColors {
     static var settingsCardColor = Color(hex: "1C1C1E")
     static var settingsHeader = Color(hex: "AEB4BF")
 
-    static var dividerColor =  Color(hex: "545458")//.withOpacity(.56);
+    static var dividerColor =  Color(hex: "545458")
 
-    static var subTitle =  Color(hex: "EBEBF5")//.withOpacity(.6);
+    static var subTitle =  Color(hex: "EBEBF5")
 
     static var buttonGray = Color(hex: "242424")
 }

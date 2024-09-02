@@ -22,7 +22,6 @@ struct SpecialButton: View {
             if(assetImage != nil){
                 ZStack{
                     Image(uiImage: UIImage(named: assetImage!)!)
-//                Image(assetImage!)
                         .resizable()
                     .frame(width: 24,height: 24)
                     .foregroundColor(.black)
@@ -50,14 +49,9 @@ struct SpecialButton: View {
                     .shadow(color: Color(hex: "888A8D"), radius: 0.5, x: 0, y: 1)
             }
         })
-        .onTapGesture(count: 2) {
-                        // Double-tap action
-            print("double tap called from special button")
-//                        isTapped.toggle()
-                    }
     }
 }
 
-//#Preview {
-//    SpecialButton()
-//}
+#Preview {
+    SpecialButton(image: "wifi_off", title: "wifi", onTap: {})
+}

@@ -35,11 +35,11 @@ struct ASCIIKeyboard: View {
                     
                     HStack(spacing: 0){
                         
-                        NaijaGuruIcon(errorCount: spellCheckerVM.hasInternet ? spellCheckerVM.correctionMatches.count : 0)
+                        NaijaGuruIcon(errorCount: spellCheckerVM.hasInternet ? spellCheckerVM.correctionMatches.count : 0, hasInternet: spellCheckerVM.hasInternet)
                             .padding(.leading, 12)
                             .onTapGesture {
                                 navigationVM.toggleNaijaKeyboard()
-                                //                            showNaijaKeyboard()
+                                spellCheckerVM.naijakeyboardISShowing = true
                             }
                         Spacer()
                             .frame(width: 20)
@@ -50,7 +50,7 @@ struct ASCIIKeyboard: View {
                                     spellCheckerVM.replaceWithMatch(match: first)
                                 }){
                                     VStack(alignment:.leading) {
-                                        Text("Correct Spelling")
+                                        Text(first.rule.category.name)
                                             .font(.system(size: 12, weight: .medium))
                                             .foregroundColor(Color(hex: "747474"))
                                             .padding(.top, 4)
@@ -119,6 +119,6 @@ struct ASCIIKeyboard: View {
     }
 }
 
-//#Preview {
-//    ASCIIKeyboard()
-//}
+#Preview {
+    ASCIIKeyboard()
+}
