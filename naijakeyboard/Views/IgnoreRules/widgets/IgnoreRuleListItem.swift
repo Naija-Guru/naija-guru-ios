@@ -15,7 +15,7 @@ struct IgnoreRuleListItem: View {
     var body: some View {
         
         HStack {
-            Text(ignoreRule.id)
+            Text(ignoreRule.displayTitle)
                 .font(.custom("Poppins-SemiBold", size: 14))
                 .foregroundColor(Color(hex: "747474"))
                 .frame( alignment: .leading)
@@ -44,7 +44,7 @@ struct IgnoreRuleListItem: View {
 }
 
 #Preview {
-    IgnoreRuleListItem(ignoreRule: IgnoreRule(id: "CAPITALIZATION", ruleType: IgnoreRuleType.category, dateTime: Date())){
+    IgnoreRuleListItem(ignoreRule: IgnoreRule(id: "CAPITALIZATION", ruleType: IgnoreRuleType.category, displayTitle: "Your First alphabet should be capital", dateTime: Date())){
         
     }
 }

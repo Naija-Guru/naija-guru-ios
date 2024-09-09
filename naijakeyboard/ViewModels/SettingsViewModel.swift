@@ -18,10 +18,10 @@ class SettingsViewModel : ObservableObject {
         loadPreferences()
         
         if(isPreview){
-            ignoreRules = [IgnoreRule(id: "DETERMINERS_MISSPELLING", ruleType: IgnoreRuleType.rule, dateTime: Date()),
-             IgnoreRule(id: "PERSONAL_PRONOUNS_MISSPELLING", ruleType: IgnoreRuleType.rule, dateTime: Date()),
-             IgnoreRule(id: "ADVERBS_MISSPELLING", ruleType: IgnoreRuleType.rule, dateTime: Date()),
-             IgnoreRule(id: "ORTHOGRAPHIC_ERRORS", ruleType: IgnoreRuleType.category, dateTime: Date())]
+            ignoreRules = [IgnoreRule(id: "DETERMINERS_MISSPELLING", ruleType: IgnoreRuleType.rule, displayTitle: "Something should be here", dateTime: Date()),
+             IgnoreRule(id: "PERSONAL_PRONOUNS_MISSPELLING", ruleType: IgnoreRuleType.rule, displayTitle: "Check sey spelling of personal pronouns dey correct", dateTime: Date()),
+             IgnoreRule(id: "ADVERBS_MISSPELLING", ruleType: IgnoreRuleType.rule, displayTitle: "Check sey spelling of personal pronouns dey correct", dateTime: Date()),
+             IgnoreRule(id: "ORTHOGRAPHIC_ERRORS", ruleType: IgnoreRuleType.category, displayTitle: "Orthographic Errors", dateTime: Date())]
         }
     }
     

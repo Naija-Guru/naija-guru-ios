@@ -269,7 +269,7 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     
     
     func ignoreRule(match : Match){
-        let ignoreRule = IgnoreRule(id: match.rule.id, ruleType: IgnoreRuleType.rule, dateTime: Date())
+        let ignoreRule = IgnoreRule(id: match.rule.id, ruleType: IgnoreRuleType.rule, displayTitle: match.rule.description, dateTime: Date())
         Task{
             let result = await spellCheckRepo.addIgnoreRule(ignoreRule)
             do{
@@ -283,7 +283,7 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     }
     
     func ignoreCategory(match : Match){
-        let ignoreRule = IgnoreRule(id: match.rule.category.id, ruleType: IgnoreRuleType.category, dateTime: Date())
+        let ignoreRule = IgnoreRule(id: match.rule.category.id, ruleType: IgnoreRuleType.category, displayTitle: match.rule.category.name, dateTime: Date())
         Task{
             let result = await spellCheckRepo.addIgnoreRule(ignoreRule)
             do{

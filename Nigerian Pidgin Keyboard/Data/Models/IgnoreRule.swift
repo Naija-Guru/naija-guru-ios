@@ -10,12 +10,14 @@ import Foundation
 struct IgnoreRule {
     let id : String
     let ruleType : IgnoreRuleType
+    let displayTitle : String
     let dateTime : Date
     
     func toDictionary() -> [String : Any] {
         return [
             "id" : id,
             "ruleType" : ruleType.toString(),
+            "displayTitle" : displayTitle,
             "dateTime" : Int64(dateTime.timeIntervalSince1970 * 1000)
         ]
     }
@@ -24,6 +26,7 @@ struct IgnoreRule {
         return IgnoreRule(
             id: dictionary["id"] as! String,
             ruleType: IgnoreRuleType.fromString(dictionary["ruleType"] as! String),
+            displayTitle: dictionary["displayTitle"] as! String,
             dateTime: Date(timeIntervalSince1970: Double((dictionary["dateTime"] as? Int64 ?? 1704121445123)) / 1000)
         )
     }
