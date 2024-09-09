@@ -9,19 +9,59 @@ import Foundation
 
 class SettingsViewModel : ObservableObject {
     
+    @Published var ignoreRules : [IgnoreRule] = []
+    
     @Published var primaryServer : String = Server.s1.serverURL
     @Published var secondaryServer : String = Server.s2.serverURL
     
-    init(){
+    init(_ isPreview : Bool = false){
         loadPreferences()
+        
+        if(isPreview){
+            ignoreRules = [IgnoreRule(id: "DETERMINERS_MISSPELLING", ruleType: IgnoreRuleType.rule, dateTime: Date()),
+             IgnoreRule(id: "PERSONAL_PRONOUNS_MISSPELLING", ruleType: IgnoreRuleType.rule, dateTime: Date()),
+             IgnoreRule(id: "ADVERBS_MISSPELLING", ruleType: IgnoreRuleType.rule, dateTime: Date()),
+             IgnoreRule(id: "ORTHOGRAPHIC_ERRORS", ruleType: IgnoreRuleType.category, dateTime: Date())]
+        }
     }
     
     func loadPreferences(){
+        
+        // Ignore rules
+        ignoreRules = getAllIgnoreRules()
         
         //Server
         primaryServer = getPrimaryServer()
         secondaryServer = getSecondaryServer()
     }
+    
+    // MARK: Ignore Rules
+    
+    func getAllIgnoreRules() -> [IgnoreRule] {
+        
+        if let userDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
+            if let result  = userDefaults.array(forKey: IgnoreRule.getKey()) as! [[String : Any]]?{
+                let ignoreAllList = result.map { d in
+                    return IgnoreRule.fromDictionary(d)
+                }
+                return ignoreAllList
+            }
+            return []
+            
+        }
+        return []
+    }
+    
+    func removeIgnoreRule(ignoreRule : IgnoreRule){
+        if let userDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
+            var tempList = ignoreRules
+            tempList.removeAll { ig in ig.id == ignoreRule.id}
+            userDefaults.setValue(tempList.map({ i in i.toDictionary() }), forKey: IgnoreRule.getKey())
+            ignoreRules = getAllIgnoreRules()
+        }
+    }
+    
+    // MARK: Servers
     
     func getPrimaryServer() -> String {
         if let sharedDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
@@ -60,6 +100,5 @@ class SettingsViewModel : ObservableObject {
         }
     }
 
-    
 }
 

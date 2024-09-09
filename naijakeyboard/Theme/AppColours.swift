@@ -14,6 +14,7 @@ class AppColors {
     static var primary = Color(hex: "0E3F30")
     static var primaryDark = Color(hex:"018F56")
     static var primaryLight = Color(hex: "E9F5F2")
+    static var primaryColorDisabled = Color(hex: "768C85")
     
     static var secondaryColor = Color(hex: "EDEAE4")
     

@@ -17,14 +17,14 @@ class ApiClient {
     private let defaultSecondaryURL = "https://spellchecker-1.de.naija.guru/"
     
     var primaryURL : String {
-        if let sharedDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
+        if let sharedDefaults = SharedUserDefaults.getUserDefaults() {
           return  sharedDefaults.string(forKey: "primary_server") ?? defaultPrimaryURL
         }
         return defaultPrimaryURL
     }
     
     var secondaryURL : String {
-        if let sharedDefaults = UserDefaults(suiteName: "group.naijakeyboard") {
+        if let sharedDefaults = SharedUserDefaults.getUserDefaults() {
           return  sharedDefaults.string(forKey: "secondary_server") ?? defaultSecondaryURL
         }
         return defaultSecondaryURL

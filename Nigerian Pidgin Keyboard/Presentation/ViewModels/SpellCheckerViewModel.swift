@@ -123,6 +123,12 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     private var textTimer : Timer?
     private var searchThread = DispatchQueue(label: "com.naija.keyboard1")
     var naijakeyboardISShowing = false
+    var showLoading = false
+    
+    func maybeShowLoading(){
+        if(!correctionMatches.isEmpty) {return}
+        showLoading = true
+    }
     
     private func listenForTextChanges(){
         print("--- started listening for Text Changes()")
@@ -147,11 +153,15 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
             DispatchQueue.main.async {
                 self.textInput = text
                 
-                if(text == self.lastSpellCheckedSentece) {return}
+                if(text == self.lastSpellCheckedSentece) {
+                    self.showLoading = false
+                    return
+                }
                 if(text.isEmpty){
                     self.textInput = ""
                     self.correctionMatches.removeAll()
                     self.lastSpellCheckedSentece = ""
+                    self.showLoading = false
                     return
                 }
                 print("about to call spellCheck")
@@ -191,7 +201,7 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
             
             if text != lastSpellCheckedSentece {
                 DispatchQueue.main.async {
-                    self.correctionMatches = matchList.map({ match in
+                    var tempCorrectionMatches : [Match] = matchList.map({ match in
                         let myText = match.context.text
                         
                         let offset = match.context.offset
@@ -210,9 +220,13 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
                         }
                         
                     })
+                    print(tempCorrectionMatches)
+                    Task {
+                     await self.filterListAndUpdate(list: tempCorrectionMatches)
+                    }
                     self.lastSpellCheckedSentece = text
                     print(self.correctionMatches)
-
+                    self.showLoading = false
                 }
             }
             
@@ -221,6 +235,25 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
         }
         
         
+    }
+    
+    private func filterListAndUpdate(list: [Match]) async {
+        let ignoreListResult = await spellCheckRepo.getAllIgnoreRules()
+        DispatchQueue.main.async {
+            var tempCorrectionMatches = list
+            do {
+                let ignoreList = try ignoreListResult.get()
+                for ignoreRule in ignoreList {
+                    for match in tempCorrectionMatches {
+                        tempCorrectionMatches.removeAll { d in d.rule.id == ignoreRule.id || d.rule.category.id == ignoreRule.id }
+                    }
+                }
+            }catch{
+                print(error)
+            }
+            
+            self.correctionMatches = tempCorrectionMatches
+        }
     }
     
     func replaceWithMatch(match : Match){
@@ -234,9 +267,33 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
         removeMatchFromList(match: match)
     }
     
-    func ignoreMatch(match : Match) {
+    
+    func ignoreRule(match : Match){
+        let ignoreRule = IgnoreRule(id: match.rule.id, ruleType: IgnoreRuleType.rule, dateTime: Date())
+        Task{
+            let result = await spellCheckRepo.addIgnoreRule(ignoreRule)
+            do{
+                let hasIgnored = try result.get()
+                print("has ignored rule : \(hasIgnored)")
+            }catch {
+                print("ignore rule error: \(String(describing:  error))")
+            }
+        }
         removeMatchFromList(match: match)
-        // todo: ignore rules
+    }
+    
+    func ignoreCategory(match : Match){
+        let ignoreRule = IgnoreRule(id: match.rule.category.id, ruleType: IgnoreRuleType.category, dateTime: Date())
+        Task{
+            let result = await spellCheckRepo.addIgnoreRule(ignoreRule)
+            do{
+                let hasIgnored = try result.get()
+                print("has ignored category : \(hasIgnored)")
+            }catch {
+                print("ignore category error: \(String(describing:  error))")
+            }
+        }
+        removeMatchFromList(match: match)
     }
     
     private func removeMatchFromList(match : Match) {

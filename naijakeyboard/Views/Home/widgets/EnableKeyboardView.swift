@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct EnableKeyboardView: View {
+    
+    let isEnabled : Bool
+    
     var body: some View {
         VStack(alignment: .leading)  {
             Spacer()
@@ -34,16 +37,20 @@ struct EnableKeyboardView: View {
             
             
             ZStack(alignment: .bottom){
-                GifImage("instructions_gif")
-                    .padding(40)
-                    .clipShape(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 10))
-                    .overlay {
-                        RoundedCornersShape(corners: [.topLeft, .topRight], radius: 10)
-                            .fill(LinearGradient(gradient: Gradient(colors: [ Color.clear, Color.white]),
-                                             startPoint: .top,
-                                             endPoint: .bottom))
-                    }
+                if(isEnabled){
+                    Image("keyboard_enabled")
+                }else{
+                    GifImage("instructions_gif")
+                        .padding(40)
+                        .clipShape(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 10))
+                        .overlay {
+                            RoundedCornersShape(corners: [.topLeft, .topRight], radius: 10)
+                                .fill(LinearGradient(gradient: Gradient(colors: [ Color.clear, Color.white]),
+                                                     startPoint: .top,
+                                                     endPoint: .bottom))
+                        }
                     
+                }
                 
                 Button(action: {
                     openSettings()
@@ -54,7 +61,7 @@ struct EnableKeyboardView: View {
                 })
                 .frame(maxWidth: .infinity)
                 .frame(height: 48)
-                .background(AppColors.primary)
+                .background( isEnabled ? AppColors.primaryColorDisabled : AppColors.primary)
                 .cornerRadius(24)
                 
             }
@@ -95,5 +102,5 @@ struct EnableKeyboardView: View {
 }
 
 #Preview {
-    EnableKeyboardView()
+    EnableKeyboardView(isEnabled: false)
 }
