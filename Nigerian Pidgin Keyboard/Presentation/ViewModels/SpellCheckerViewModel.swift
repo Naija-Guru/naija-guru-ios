@@ -195,6 +195,7 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     private func spellCheck(_ text : String) async {
         print("Spell Check called")
         print("Sentence: \(text)")
+        showLoading = true
         let result = await spellCheckRepo.getCorrections(text: text)
         do{
             let matchList : [Match] = try result.get()
