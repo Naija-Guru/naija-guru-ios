@@ -50,22 +50,31 @@ struct SpellCheckMatchView: View {
                 
                 Spacer()
                 
-                HStack() {
-                    Spacer()
-                    Button(action: onIgnoreRule) {
+                HStack(spacing: 0) {
+
                         Text("Ignore Rule")
                             .font(.custom("Poppins-Medium", size: 14))
                             .foregroundColor(Color(hex: "8E8E93"))
                             .padding(.vertical, 10)
                             .padding(.horizontal, 19)
-                    }
-                    Button(action: onIgnoreCategory) {
+                            .onTapGesture(perform: onIgnoreRule)
+
                         Text("Ignore Category")
                             .font(.custom("Poppins-Medium", size: 14))
                             .foregroundColor(Color(hex: "8E8E93"))
                             .padding(.vertical, 10)
                             .padding(.horizontal, 19)
+                            .onTapGesture(perform: onIgnoreCategory)
+                    
+                    Button(action: onAccept) {
+                        Text("Accept")
+                            .font(.custom("Poppins-Medium", size: 14))
+                            .foregroundColor(.white)
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 19)
                     }
+                    .background(KeyboardColours.primary)
+                    .clipShape(RoundedCornersShape(corners: .allCorners, radius: 30))
                     
                 }
                 .padding(.trailing, 18)

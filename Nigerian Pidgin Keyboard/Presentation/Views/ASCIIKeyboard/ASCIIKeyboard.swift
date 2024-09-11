@@ -45,29 +45,6 @@ struct ASCIIKeyboard: View {
                         Spacer()
                             .frame(width: 20)
                         
-//                        if(!spellCheckerVM.correctionMatches.isEmpty && spellCheckerVM.hasInternet){
-//                            if let first = spellCheckerVM.correctionMatches.first{
-//                                Button(action:{
-//                                    spellCheckerVM.replaceWithMatch(match: first)
-//                                }){
-//                                    VStack(alignment:.leading) {
-//                                        Text(first.rule.category.name)
-//                                            .font(.system(size: 12, weight: .medium))
-//                                            .foregroundColor(Color(hex: "747474"))
-//                                            .padding(.top, 4)
-//                                            .padding(.horizontal, 6)
-//                                        
-//                                        Text(first.replacements.first?.value ?? "")
-//                                            .font(.system(size: 12, weight: .medium))
-//                                            .foregroundColor(KeyboardColours.primary)
-//                                            .padding(.bottom, 4)
-//                                            .padding(.horizontal, 6)
-//                                    }
-//                                    .background(.white)
-//                                    .clipShape(RoundedCornersShape(corners: .allCorners, radius: 3))
-//                                }
-//                            }
-//                        }
                         Text("Click the icon to scan for errors")
                             .font(.system(size: 12, weight: .medium))
                             .foregroundColor(Color(hex: "747474"))
@@ -94,7 +71,6 @@ struct ASCIIKeyboard: View {
                     let returnWidth = width * 2 + width * 0.5
                     
                     HStack(spacing: spacing ) {
-                        //                        Spacer().frame(width: spacing)
                         
                         SpecialButton(image: nil, title: isAlphabet ? "123" : "ABC", width: alphaNumbericWidth, isDark: true){
                             isAlphabet = !isAlphabet

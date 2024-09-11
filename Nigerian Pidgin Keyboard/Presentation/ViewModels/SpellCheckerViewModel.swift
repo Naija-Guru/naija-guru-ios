@@ -195,31 +195,14 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     private func spellCheck(_ text : String) async {
         print("Spell Check called")
         print("Sentence: \(text)")
+        showLoading = true
         let result = await spellCheckRepo.getCorrections(text: text)
         do{
             let matchList : [Match] = try result.get()
             
             if text != lastSpellCheckedSentece {
                 DispatchQueue.main.async {
-                    var tempCorrectionMatches : [Match] = matchList.map({ match in
-                        let myText = match.context.text
-                        
-                        let offset = match.context.offset
-                        let length = match.context.length
-                        
-                        if let startIndex = myText.index(myText.startIndex, offsetBy: offset, limitedBy: myText.endIndex),
-                           let endIndex = myText.index(startIndex, offsetBy: length, limitedBy: myText.endIndex) {
-                            // Extract the substring
-                            let substring = myText[startIndex..<endIndex]
-                            
-                            return match.copy(wordToBeReplace: String(substring))
-                            
-                            
-                        }else{
-                            return match
-                        }
-                        
-                    })
+                    let tempCorrectionMatches : [Match] = matchList
                     print(tempCorrectionMatches)
                     Task {
                      await self.filterListAndUpdate(list: tempCorrectionMatches)
@@ -233,8 +216,6 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
         }catch {
             print(error)
         }
-        
-        
     }
     
     private func filterListAndUpdate(list: [Match]) async {
@@ -244,11 +225,11 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
             do {
                 let ignoreList = try ignoreListResult.get()
                 for ignoreRule in ignoreList {
-                    for match in tempCorrectionMatches {
+                    for _ in tempCorrectionMatches {
                         tempCorrectionMatches.removeAll { d in d.rule.id == ignoreRule.id || d.rule.category.id == ignoreRule.id }
                     }
                 }
-            }catch{
+            } catch {
                 print(error)
             }
             
@@ -257,13 +238,10 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
     }
     
     func replaceWithMatch(match : Match){
-                print("replaceWithMatch called")
-        guard let targetWord = match.wordToBeReplaced else {return}
-                print("targetWord acquired : \(targetWord)")
         guard let replacementmentWord = match.replacements.first?.value else {return}
-                print("replacementWord acquired : \(replacementmentWord)")
-        replaceWord(targetWord: targetWord, replacementWord: replacementmentWord)
-                print("placedWord called and returned")
+                
+        replaceRangeAt(offset: match.offset, length: match.length, with: replacementmentWord)
+                
         removeMatchFromList(match: match)
     }
     
@@ -301,30 +279,31 @@ class SpellCheckerViewModel : NSObject, ObservableObject {
         correctionMatches.remove(at: index)
     }
     
-    
-    // Function to replace a word with another word
-    private func replaceWord(targetWord: String, replacementWord: String) {
+    func replaceRangeAt(offset: Int, length: Int, with replacement: String)  {
         DispatchQueue(label: "com.naija.keyboard1").async {
             self.naijakeyboardISShowing ? self.moveCursorToEndOfFullDocumentContext() : self.moveCursorToEndOfSentence()
             
             DispatchQueue.main.async {
                 
-                let text =  self.textInput
-                print("before replacement: \(text)")
-                // Find the word in the existing text
-                let newText = text.replacingOccurrences(of: targetWord, with: replacementWord)
+                var text =  self.textInput
+                guard offset >= 0, length > 0, offset + length <= text.count else {
+                    print("Invalid range")
+                    return
+                }
                 
-                print("after replacement: \(newText)")
-                // Delete the old text
-                for _ in text {
+                let startIndex = text.index(text.startIndex, offsetBy: offset)
+                let endIndex = text.index(startIndex, offsetBy: length)
+                let range = startIndex..<endIndex
+                
+                text.replaceSubrange(range, with: replacement)
+                
+                for _ in self.textInput {
                     self.textDocumentProxy.deleteBackward()
                 }
                 
-                // Insert the new text
-                self.textDocumentProxy.insertText(newText)
+                self.textDocumentProxy.insertText(text)
+                
             }
         }
-        
     }
-    
 }

@@ -54,11 +54,6 @@ struct Match: Codable, Hashable {
     let rule: Rule
     let ignoreForIncompleteSentence: Bool
     let contextForSureMatch: Int
-    var wordToBeReplaced: String?
-    
-    func copy(wordToBeReplace : String) -> Match {
-        return Match(message: self.message, shortMessage: self.shortMessage, replacements: self.replacements, offset: self.offset, length: self.length, context: self.context, sentence: self.sentence, type: self.type, rule: self.rule, ignoreForIncompleteSentence: self.ignoreForIncompleteSentence, contextForSureMatch: self.contextForSureMatch, wordToBeReplaced: wordToBeReplace)
-    }
     
     static func == (lhs: Match, rhs: Match) -> Bool {
         return lhs.message == rhs.message && lhs.replacements == rhs.replacements && lhs.offset == rhs.offset && lhs.length == rhs.length && lhs.context == rhs.context && lhs.sentence == rhs.sentence && lhs.rule == rhs.rule && lhs.ignoreForIncompleteSentence == rhs.ignoreForIncompleteSentence && lhs.contextForSureMatch == rhs.contextForSureMatch

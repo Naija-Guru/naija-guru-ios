@@ -67,7 +67,6 @@ struct Alphabets: View {
             let tSpecialWidth = (remainingWidth/2)-10
             
             HStack(spacing: 0) {
-                //"capslock.fill" : "capslock"
                 Image(systemName: isCapslockOn ? "capslock.fill" : isShiftKeyOn ? "arrowshape.up.fill" : "arrowshape.up")
                     .frame(width: tSpecialWidth,height: 42)
                     .foregroundColor(.black)
@@ -77,7 +76,7 @@ struct Alphabets: View {
                     .onTapGesture(count: 2) {//double tap
                         isCapslockOn = !isCapslockOn
                     }
-                    .onTapGesture {//single tap
+                    .onTapGesture {
                         isShiftKeyOn = !isShiftKeyOn
                         isCapslockOn = false
                     }
