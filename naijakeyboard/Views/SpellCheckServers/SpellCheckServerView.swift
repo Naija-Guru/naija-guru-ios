@@ -85,4 +85,5 @@ struct SpellCheckServerView: View {
 
 #Preview {
     SpellCheckServerView()
+        .environmentObject(SettingsViewModel())
 }

@@ -24,8 +24,9 @@ struct SettingsView: View {
                 
                 Spacer()
                     .frame(height: 20)
-                
-                SettingsListItem(image: "ignore_rules", title: "Ignore Rules", subTitle: "See the list of ruels you've ignored")
+                NavigationLink(destination:  IgnoreRulesView(), label: {
+                    SettingsListItem(image: "ignore_rules", title: "Ignore Rules", subTitle: "See the list of rules you've ignored")
+                })
                 
                 Spacer()
                     .frame(height: 24)

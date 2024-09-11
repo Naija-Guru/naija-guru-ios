@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct naijakeyboardApp: App {
     @StateObject private var settingsViewModel = SettingsViewModel()
+    @StateObject private var homeViewModel = HomeViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -17,6 +18,7 @@ struct naijakeyboardApp: App {
                 HomeView()
             }.tint(AppColors.primary)
                 .environmentObject(settingsViewModel)
+                .environmentObject(homeViewModel)
         }
     }
     

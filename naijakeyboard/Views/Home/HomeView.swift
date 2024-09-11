@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject private var homeVM : HomeViewModel
+    
     var body: some View {
         
         VStack{
@@ -36,7 +38,7 @@ struct HomeView: View {
             Spacer()
                 .frame(height: 48)
             
-            EnableKeyboardView()
+            EnableKeyboardView(isEnabled: homeVM.isKeyboardEnabled)
             
             Spacer()
                 .frame(height: 40)
@@ -68,11 +70,15 @@ struct HomeView: View {
             })
             
         }.padding(.horizontal, AppDimensions.pageMargin)
+            .onAppear{
+                homeVM.fetchIsKeyboardEnabled()
+            }
           
     }//view
 }
 
 #Preview {
     HomeView()
+        .environmentObject(HomeViewModel())
 }
 

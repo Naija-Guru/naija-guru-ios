@@ -40,6 +40,7 @@ struct ASCIIKeyboard: View {
                             .onTapGesture {
                                 navigationVM.toggleNaijaKeyboard()
                                 spellCheckerVM.naijakeyboardISShowing = true
+                                spellCheckerVM.maybeShowLoading()
                             }
                         Spacer()
                             .frame(width: 20)

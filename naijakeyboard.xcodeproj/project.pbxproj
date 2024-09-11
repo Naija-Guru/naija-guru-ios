@@ -37,6 +37,11 @@
 		CE75746E2C6B176E00B1E9CE /* EmojiKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE75746D2C6B176E00B1E9CE /* EmojiKit */; };
 		CE7574702C6B1F8300B1E9CE /* EmojiKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75746F2C6B1F8300B1E9CE /* EmojiKeypad.swift */; };
 		CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */; };
+		CEB421772C8E236400DF7297 /* IgnoreRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB421762C8E236400DF7297 /* IgnoreRule.swift */; };
+		CEB421792C8E2A8800DF7297 /* IgnoreRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB421782C8E2A8800DF7297 /* IgnoreRule.swift */; };
+		CEB4217C2C8E2D1E00DF7297 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4217B2C8E2D1E00DF7297 /* SharedUserDefaults.swift */; };
+		CEB4217F2C8E4DE300DF7297 /* IgnoreRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4217E2C8E4DE300DF7297 /* IgnoreRulesView.swift */; };
+		CEB421822C8E550700DF7297 /* IgnoreRuleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB421812C8E550700DF7297 /* IgnoreRuleListItem.swift */; };
 		CED50D6B2C7BC87000B5D877 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50D6A2C7BC87000B5D877 /* SettingsViewModel.swift */; };
 		CED50D6E2C7BC9B000B5D877 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50D6D2C7BC9B000B5D877 /* Server.swift */; };
 		CED50D712C7BDB1100B5D877 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50D702C7BDB1100B5D877 /* Connectivity.swift */; };
@@ -153,6 +158,11 @@
 		CE7574652C6B0B7200B1E9CE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		CE75746F2C6B1F8300B1E9CE /* EmojiKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeypad.swift; sourceTree = "<group>"; };
 		CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CEB421762C8E236400DF7297 /* IgnoreRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRule.swift; sourceTree = "<group>"; };
+		CEB421782C8E2A8800DF7297 /* IgnoreRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRule.swift; sourceTree = "<group>"; };
+		CEB4217B2C8E2D1E00DF7297 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
+		CEB4217E2C8E4DE300DF7297 /* IgnoreRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRulesView.swift; sourceTree = "<group>"; };
+		CEB421812C8E550700DF7297 /* IgnoreRuleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRuleListItem.swift; sourceTree = "<group>"; };
 		CED50D6A2C7BC87000B5D877 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		CED50D6D2C7BC9B000B5D877 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		CED50D702C7BDB1100B5D877 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
@@ -276,6 +286,7 @@
 		CE7574232C69319000B1E9CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEB4217D2C8E4DC900DF7297 /* IgnoreRules */,
 				CE74F0852C72B98100BE305B /* SpellCheckServers */,
 				CE7574312C69575100B1E9CE /* Settings */,
 				CE7574292C69434F00B1E9CE /* Home */,
@@ -419,10 +430,36 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		CEB4217A2C8E2CE600DF7297 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4217B2C8E2D1E00DF7297 /* SharedUserDefaults.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		CEB4217D2C8E4DC900DF7297 /* IgnoreRules */ = {
+			isa = PBXGroup;
+			children = (
+				CEB421802C8E54F700DF7297 /* widgets */,
+				CEB4217E2C8E4DE300DF7297 /* IgnoreRulesView.swift */,
+			);
+			path = IgnoreRules;
+			sourceTree = "<group>";
+		};
+		CEB421802C8E54F700DF7297 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CEB421812C8E550700DF7297 /* IgnoreRuleListItem.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
 		CED50D6C2C7BC93800B5D877 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CED50D6D2C7BC9B000B5D877 /* Server.swift */,
+				CEB421782C8E2A8800DF7297 /* IgnoreRule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -528,6 +565,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDEB9402C7942FE0042346C /* SpellCheckResponse.swift */,
+				CEB421762C8E236400DF7297 /* IgnoreRule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -535,6 +573,7 @@
 		CEDEB9352C7915830042346C /* Datasource */ = {
 			isa = PBXGroup;
 			children = (
+				CEB4217A2C8E2CE600DF7297 /* Database */,
 				CEDEB9422C794AC90042346C /* Network */,
 			);
 			path = Datasource;
@@ -763,6 +802,7 @@
 			files = (
 				CED50DB12C83E84200B5D877 /* ServerTextField.swift in Sources */,
 				CE75742E2C694C3200B1E9CE /* EnableKeyboardView.swift in Sources */,
+				CEB421822C8E550700DF7297 /* IgnoreRuleListItem.swift in Sources */,
 				CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */,
 				CE7574332C69576000B1E9CE /* SettingsView.swift in Sources */,
 				CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */,
@@ -771,12 +811,14 @@
 				CE7574222C69318200B1E9CE /* HomeView.swift in Sources */,
 				CE7574142C692FB700B1E9CE /* naijakeyboardApp.swift in Sources */,
 				CE7574362C6960C400B1E9CE /* SettingsListItem.swift in Sources */,
+				CEB4217F2C8E4DE300DF7297 /* IgnoreRulesView.swift in Sources */,
 				CED50DB42C83F37800B5D877 /* QuickFunctions.swift in Sources */,
 				CED50D6E2C7BC9B000B5D877 /* Server.swift in Sources */,
 				CE7574262C69327300B1E9CE /* AppColours.swift in Sources */,
 				CE74F08A2C72BD4100BE305B /* ServerListItemView.swift in Sources */,
 				CE7574302C69519D00B1E9CE /* RoundedCornersShape.swift in Sources */,
 				CED50D6B2C7BC87000B5D877 /* SettingsViewModel.swift in Sources */,
+				CEB421792C8E2A8800DF7297 /* IgnoreRule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,12 +832,14 @@
 				CE7574482C69759900B1E9CE /* MainView.swift in Sources */,
 				CED50D732C7BE06E00B5D877 /* SpellCheckStateDescriptionView.swift in Sources */,
 				CEDEB9392C791B790042346C /* NavigationViewModel.swift in Sources */,
+				CEB421772C8E236400DF7297 /* IgnoreRule.swift in Sources */,
 				CE7574522C699A4F00B1E9CE /* NumbersAndSymbols.swift in Sources */,
 				CE75744F2C699A0E00B1E9CE /* ASCIIKeyboard.swift in Sources */,
 				CE7574572C699AE300B1E9CE /* KeyboardColours.swift in Sources */,
 				CE1678622C7563D80057F0A1 /* NaijaGuruIcon.swift in Sources */,
 				CEDEB9522C795AA00042346C /* SpellCheckRepoImpl.swift in Sources */,
 				CEDEB9452C794AF80042346C /* SpellCheckApi.swift in Sources */,
+				CEB4217C2C8E2D1E00DF7297 /* SharedUserDefaults.swift in Sources */,
 				CE7574612C6AECC100B1E9CE /* NaijaKeyboardIcon.swift in Sources */,
 				CE75745E2C6AEBAA00B1E9CE /* NaijaKeyboard.swift in Sources */,
 				CE7574592C699B3100B1E9CE /* SpecialButton.swift in Sources */,

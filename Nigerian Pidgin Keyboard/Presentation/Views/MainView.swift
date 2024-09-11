@@ -12,7 +12,11 @@ struct MainView: View {
     @EnvironmentObject private var navigationVM : NavigationViewModel
     @EnvironmentObject private var spellCheckerVM : SpellCheckerViewModel
 
-    
+    init(){
+        if let userDefaults = SharedUserDefaults.getUserDefaults() {
+            userDefaults.setValue(true, forKey: "isKeyboardEnabled")
+        }
+    }
     
     var body: some View {
         

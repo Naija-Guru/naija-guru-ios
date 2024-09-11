@@ -11,7 +11,8 @@ struct SpellCheckMatchView: View {
     
     let match : Match
     let onAccept : () -> Void
-    let onIgnore : () -> Void
+    let onIgnoreRule : () -> Void
+    let onIgnoreCategory : () -> Void
     
     var body: some View {
         GeometryReader { rect in
@@ -51,23 +52,21 @@ struct SpellCheckMatchView: View {
                 
                 HStack() {
                     Spacer()
-                    Button(action: onIgnore) {
-                        Text("Ignore")
+                    Button(action: onIgnoreRule) {
+                        Text("Ignore Rule")
+                            .font(.custom("Poppins-Medium", size: 14))
+                            .foregroundColor(Color(hex: "8E8E93"))
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 19)
+                    }
+                    Button(action: onIgnoreCategory) {
+                        Text("Ignore Category")
                             .font(.custom("Poppins-Medium", size: 14))
                             .foregroundColor(Color(hex: "8E8E93"))
                             .padding(.vertical, 10)
                             .padding(.horizontal, 19)
                     }
                     
-                    Button(action: onAccept) {
-                        Text("Accept")
-                            .font(.custom("Poppins-Medium", size: 14))
-                            .foregroundColor(.white)
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 19)
-                    }
-                    .background(KeyboardColours.primary)
-                    .clipShape(RoundedCornersShape(corners: .allCorners, radius: 30))
                 }
                 .padding(.trailing, 18)
                 .padding(.bottom, 10)
