@@ -93,6 +93,3 @@ struct SpellCheckMatchView: View {
     }
 }
 
-//#Preview {
-//    SpellCheckMatchView(match: Match(from: JSONDecoder() as! Decoder), onAccept: {}, onIgnore: {})
-//}
