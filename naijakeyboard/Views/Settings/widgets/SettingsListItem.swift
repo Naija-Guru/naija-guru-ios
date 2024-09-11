@@ -2,7 +2,7 @@
 //  SettinsListItem.swift
 //  naijakeyboard
 //
-//  Created by Hyebreed on 11/08/2024.
+//  Created by Emmanuel Idaresit on 11/08/2024.
 //
 
 import SwiftUI
@@ -25,7 +25,7 @@ struct SettingsListItem: View {
                 .foregroundColor(AppColors.primary)
             }
             .frame(width: 40, height: 40)
-            .background(AppColors.primaryLight)
+            .background(AppColors.secondaryColor)
             .clipShape(Circle())
             
             Spacer()
@@ -33,7 +33,7 @@ struct SettingsListItem: View {
             
             VStack{
                 Text(title)
-                    .font(.system(size: 16, weight: Font.Weight.semibold))
+                    .font(.custom("CabinetGroteskVariable-Bold_Bold", size: 18))
                     .foregroundColor(AppColors.title)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -41,7 +41,7 @@ struct SettingsListItem: View {
                     .frame(height: 8)
                 
                 Text(subTitle)
-                    .font(.system(size: 14, weight: Font.Weight.regular))
+                    .font(.custom("Poppins-Regular", size: 14))
                     .foregroundColor(AppColors.listItemSubtitle)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
