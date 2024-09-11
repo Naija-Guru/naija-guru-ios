@@ -1,0 +1,1160 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE1678622C7563D80057F0A1 /* NaijaGuruIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1678612C7563D70057F0A1 /* NaijaGuruIcon.swift */; };
+		CE74F0842C72B21000BE305B /* instructions_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE74F0832C72B21000BE305B /* instructions_gif.gif */; };
+		CE74F0872C72B9AF00BE305B /* SpellCheckServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */; };
+		CE74F08A2C72BD4100BE305B /* ServerListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F0892C72BD4100BE305B /* ServerListItemView.swift */; };
+		CE7574142C692FB700B1E9CE /* NaijaGuruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574132C692FB700B1E9CE /* NaijaGuruApp.swift */; };
+		CE7574182C692FB900B1E9CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7574172C692FB900B1E9CE /* Assets.xcassets */; };
+		CE75741B2C692FB900B1E9CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE75741A2C692FB900B1E9CE /* Preview Assets.xcassets */; };
+		CE7574222C69318200B1E9CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574212C69318200B1E9CE /* HomeView.swift */; };
+		CE7574262C69327300B1E9CE /* AppColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574252C69327300B1E9CE /* AppColours.swift */; };
+		CE7574282C693BBE00B1E9CE /* AppDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574272C693BBE00B1E9CE /* AppDimensions.swift */; };
+		CE75742E2C694C3200B1E9CE /* EnableKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75742D2C694C3200B1E9CE /* EnableKeyboardView.swift */; };
+		CE7574302C69519D00B1E9CE /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75742F2C69519D00B1E9CE /* RoundedCornersShape.swift */; };
+		CE7574332C69576000B1E9CE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574322C69576000B1E9CE /* SettingsView.swift */; };
+		CE7574362C6960C400B1E9CE /* SettingsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574352C6960C400B1E9CE /* SettingsListItem.swift */; };
+		CE75743E2C696AB500B1E9CE /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */; };
+		CE7574422C696AB500B1E9CE /* NaijaKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE75743B2C696AB400B1E9CE /* NaijaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE7574482C69759900B1E9CE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574472C69759900B1E9CE /* MainView.swift */; };
+		CE75744F2C699A0E00B1E9CE /* ASCIIKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */; };
+		CE7574522C699A4F00B1E9CE /* NumbersAndSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */; };
+		CE7574542C699A8800B1E9CE /* CharacterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574532C699A8800B1E9CE /* CharacterButton.swift */; };
+		CE7574572C699AE300B1E9CE /* KeyboardColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574562C699AE300B1E9CE /* KeyboardColours.swift */; };
+		CE7574592C699B3100B1E9CE /* SpecialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574582C699B3100B1E9CE /* SpecialButton.swift */; };
+		CE75745B2C699B8900B1E9CE /* Alphabets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75745A2C699B8900B1E9CE /* Alphabets.swift */; };
+		CE75745C2C6A9F7800B1E9CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7574172C692FB900B1E9CE /* Assets.xcassets */; };
+		CE75745E2C6AEBAA00B1E9CE /* NaijaKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75745D2C6AEBAA00B1E9CE /* NaijaKeyboard.swift */; };
+		CE7574612C6AECC100B1E9CE /* NaijaKeyboardIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574602C6AECC100B1E9CE /* NaijaKeyboardIcon.swift */; };
+		CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574652C6B0B7200B1E9CE /* GifImage.swift */; };
+		CE75746E2C6B176E00B1E9CE /* EmojiKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE75746D2C6B176E00B1E9CE /* EmojiKit */; };
+		CE7574702C6B1F8300B1E9CE /* EmojiKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75746F2C6B1F8300B1E9CE /* EmojiKeypad.swift */; };
+		CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */; };
+		CEB421772C8E236400DF7297 /* IgnoreRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB421762C8E236400DF7297 /* IgnoreRule.swift */; };
+		CEB421792C8E2A8800DF7297 /* IgnoreRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB421782C8E2A8800DF7297 /* IgnoreRule.swift */; };
+		CEB4217C2C8E2D1E00DF7297 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4217B2C8E2D1E00DF7297 /* SharedUserDefaults.swift */; };
+		CEB4217F2C8E4DE300DF7297 /* IgnoreRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4217E2C8E4DE300DF7297 /* IgnoreRulesView.swift */; };
+		CEB421822C8E550700DF7297 /* IgnoreRuleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB421812C8E550700DF7297 /* IgnoreRuleListItem.swift */; };
+		CED50D6B2C7BC87000B5D877 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50D6A2C7BC87000B5D877 /* SettingsViewModel.swift */; };
+		CED50D6E2C7BC9B000B5D877 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50D6D2C7BC9B000B5D877 /* Server.swift */; };
+		CED50D712C7BDB1100B5D877 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50D702C7BDB1100B5D877 /* Connectivity.swift */; };
+		CED50D732C7BE06E00B5D877 /* SpellCheckStateDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50D722C7BE06E00B5D877 /* SpellCheckStateDescriptionView.swift */; };
+		CED50D762C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D752C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf */; };
+		CED50D772C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D752C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf */; };
+		CED50D8C2C7BEE2000B5D877 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7A2C7BEE1F00B5D877 /* Poppins-Light.ttf */; };
+		CED50D8D2C7BEE2000B5D877 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7A2C7BEE1F00B5D877 /* Poppins-Light.ttf */; };
+		CED50D8E2C7BEE2000B5D877 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7B2C7BEE1F00B5D877 /* Poppins-Thin.ttf */; };
+		CED50D8F2C7BEE2000B5D877 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7B2C7BEE1F00B5D877 /* Poppins-Thin.ttf */; };
+		CED50D902C7BEE2000B5D877 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7C2C7BEE1F00B5D877 /* Poppins-ExtraLightItalic.ttf */; };
+		CED50D912C7BEE2000B5D877 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7C2C7BEE1F00B5D877 /* Poppins-ExtraLightItalic.ttf */; };
+		CED50D922C7BEE2000B5D877 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7D2C7BEE1F00B5D877 /* Poppins-Bold.ttf */; };
+		CED50D932C7BEE2000B5D877 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7D2C7BEE1F00B5D877 /* Poppins-Bold.ttf */; };
+		CED50D942C7BEE2000B5D877 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7E2C7BEE1F00B5D877 /* Poppins-Regular.ttf */; };
+		CED50D952C7BEE2000B5D877 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7E2C7BEE1F00B5D877 /* Poppins-Regular.ttf */; };
+		CED50D962C7BEE2000B5D877 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7F2C7BEE1F00B5D877 /* Poppins-ExtraBoldItalic.ttf */; };
+		CED50D972C7BEE2000B5D877 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D7F2C7BEE1F00B5D877 /* Poppins-ExtraBoldItalic.ttf */; };
+		CED50D982C7BEE2000B5D877 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D802C7BEE1F00B5D877 /* Poppins-SemiBold.ttf */; };
+		CED50D992C7BEE2000B5D877 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D802C7BEE1F00B5D877 /* Poppins-SemiBold.ttf */; };
+		CED50D9A2C7BEE2000B5D877 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D812C7BEE1F00B5D877 /* Poppins-LightItalic.ttf */; };
+		CED50D9B2C7BEE2000B5D877 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D812C7BEE1F00B5D877 /* Poppins-LightItalic.ttf */; };
+		CED50D9C2C7BEE2000B5D877 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D822C7BEE2000B5D877 /* Poppins-BoldItalic.ttf */; };
+		CED50D9D2C7BEE2000B5D877 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D822C7BEE2000B5D877 /* Poppins-BoldItalic.ttf */; };
+		CED50D9E2C7BEE2000B5D877 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D832C7BEE2000B5D877 /* Poppins-MediumItalic.ttf */; };
+		CED50D9F2C7BEE2000B5D877 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D832C7BEE2000B5D877 /* Poppins-MediumItalic.ttf */; };
+		CED50DA02C7BEE2000B5D877 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D842C7BEE2000B5D877 /* Poppins-BlackItalic.ttf */; };
+		CED50DA12C7BEE2000B5D877 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D842C7BEE2000B5D877 /* Poppins-BlackItalic.ttf */; };
+		CED50DA22C7BEE2000B5D877 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D852C7BEE2000B5D877 /* Poppins-ThinItalic.ttf */; };
+		CED50DA32C7BEE2000B5D877 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D852C7BEE2000B5D877 /* Poppins-ThinItalic.ttf */; };
+		CED50DA42C7BEE2000B5D877 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D862C7BEE2000B5D877 /* Poppins-Medium.ttf */; };
+		CED50DA52C7BEE2000B5D877 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D862C7BEE2000B5D877 /* Poppins-Medium.ttf */; };
+		CED50DA62C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D872C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf */; };
+		CED50DA72C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D872C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf */; };
+		CED50DA82C7BEE2000B5D877 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D882C7BEE2000B5D877 /* Poppins-Italic.ttf */; };
+		CED50DA92C7BEE2000B5D877 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D882C7BEE2000B5D877 /* Poppins-Italic.ttf */; };
+		CED50DAA2C7BEE2000B5D877 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D892C7BEE2000B5D877 /* Poppins-ExtraLight.ttf */; };
+		CED50DAB2C7BEE2000B5D877 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D892C7BEE2000B5D877 /* Poppins-ExtraLight.ttf */; };
+		CED50DAC2C7BEE2000B5D877 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D8A2C7BEE2000B5D877 /* Poppins-Black.ttf */; };
+		CED50DAD2C7BEE2000B5D877 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D8A2C7BEE2000B5D877 /* Poppins-Black.ttf */; };
+		CED50DAE2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D8B2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf */; };
+		CED50DAF2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED50D8B2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf */; };
+		CED50DB12C83E84200B5D877 /* ServerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50DB02C83E84200B5D877 /* ServerTextField.swift */; };
+		CED50DB42C83F37800B5D877 /* QuickFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50DB32C83F37800B5D877 /* QuickFunctions.swift */; };
+		CED50DB72C85D7F800B5D877 /* RoundedRectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED50DB62C85D7F700B5D877 /* RoundedRectangleShape.swift */; };
+		CEDEB9392C791B790042346C /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9382C791B790042346C /* NavigationViewModel.swift */; };
+		CEDEB93B2C7920470042346C /* SpellCheckerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB93A2C7920470042346C /* SpellCheckerViewModel.swift */; };
+		CEDEB93F2C793E3E0042346C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB93E2C793E3E0042346C /* ApiClient.swift */; };
+		CEDEB9412C7942FE0042346C /* SpellCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9402C7942FE0042346C /* SpellCheckResponse.swift */; };
+		CEDEB9452C794AF80042346C /* SpellCheckApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9442C794AF80042346C /* SpellCheckApi.swift */; };
+		CEDEB9482C7952A50042346C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9472C7952A50042346C /* ServiceLocator.swift */; };
+		CEDEB94A2C7953FA0042346C /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9492C7953FA0042346C /* DI.swift */; };
+		CEDEB94D2C7957710042346C /* SpellCheckError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB94C2C7957710042346C /* SpellCheckError.swift */; };
+		CEDEB94F2C7957FD0042346C /* SpellCheckRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB94E2C7957FD0042346C /* SpellCheckRepo.swift */; };
+		CEDEB9522C795AA00042346C /* SpellCheckRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9512C795AA00042346C /* SpellCheckRepoImpl.swift */; };
+		CEDEB9562C79732F0042346C /* SpellCheckMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEB9552C79732F0042346C /* SpellCheckMatchView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE7574402C696AB500B1E9CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7574082C692FB700B1E9CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE75743A2C696AB400B1E9CE;
+			remoteInfo = "Nigerian Pidgin Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE7574462C696AB500B1E9CE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE7574422C696AB500B1E9CE /* NaijaKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE1678612C7563D70057F0A1 /* NaijaGuruIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaijaGuruIcon.swift; sourceTree = "<group>"; };
+		CE74F0832C72B21000BE305B /* instructions_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = instructions_gif.gif; sourceTree = "<group>"; };
+		CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckServerView.swift; sourceTree = "<group>"; };
+		CE74F0892C72BD4100BE305B /* ServerListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListItemView.swift; sourceTree = "<group>"; };
+		CE7574102C692FB700B1E9CE /* NaijaGuruApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaijaGuruApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7574132C692FB700B1E9CE /* NaijaGuruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaijaGuruApp.swift; sourceTree = "<group>"; };
+		CE7574172C692FB900B1E9CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE75741A2C692FB900B1E9CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE7574212C69318200B1E9CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE7574252C69327300B1E9CE /* AppColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColours.swift; sourceTree = "<group>"; };
+		CE7574272C693BBE00B1E9CE /* AppDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDimensions.swift; sourceTree = "<group>"; };
+		CE75742D2C694C3200B1E9CE /* EnableKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableKeyboardView.swift; sourceTree = "<group>"; };
+		CE75742F2C69519D00B1E9CE /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		CE7574322C69576000B1E9CE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CE7574352C6960C400B1E9CE /* SettingsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListItem.swift; sourceTree = "<group>"; };
+		CE75743B2C696AB400B1E9CE /* NaijaKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NaijaKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		CE75743F2C696AB500B1E9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7574472C69759900B1E9CE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASCIIKeyboard.swift; sourceTree = "<group>"; };
+		CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersAndSymbols.swift; sourceTree = "<group>"; };
+		CE7574532C699A8800B1E9CE /* CharacterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterButton.swift; sourceTree = "<group>"; };
+		CE7574562C699AE300B1E9CE /* KeyboardColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardColours.swift; sourceTree = "<group>"; };
+		CE7574582C699B3100B1E9CE /* SpecialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialButton.swift; sourceTree = "<group>"; };
+		CE75745A2C699B8900B1E9CE /* Alphabets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabets.swift; sourceTree = "<group>"; };
+		CE75745D2C6AEBAA00B1E9CE /* NaijaKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaijaKeyboard.swift; sourceTree = "<group>"; };
+		CE7574602C6AECC100B1E9CE /* NaijaKeyboardIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaijaKeyboardIcon.swift; sourceTree = "<group>"; };
+		CE7574622C6AFE6600B1E9CE /* NaijaKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NaijaKeyboard.entitlements; sourceTree = "<group>"; };
+		CE7574632C6AFED900B1E9CE /* NaijaGuruApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NaijaGuruApp.entitlements; sourceTree = "<group>"; };
+		CE7574642C6AFF4200B1E9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE7574652C6B0B7200B1E9CE /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		CE75746F2C6B1F8300B1E9CE /* EmojiKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeypad.swift; sourceTree = "<group>"; };
+		CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CEB421762C8E236400DF7297 /* IgnoreRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRule.swift; sourceTree = "<group>"; };
+		CEB421782C8E2A8800DF7297 /* IgnoreRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRule.swift; sourceTree = "<group>"; };
+		CEB4217B2C8E2D1E00DF7297 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
+		CEB4217E2C8E4DE300DF7297 /* IgnoreRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRulesView.swift; sourceTree = "<group>"; };
+		CEB421812C8E550700DF7297 /* IgnoreRuleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreRuleListItem.swift; sourceTree = "<group>"; };
+		CED50D6A2C7BC87000B5D877 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		CED50D6D2C7BC9B000B5D877 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		CED50D702C7BDB1100B5D877 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		CED50D722C7BE06E00B5D877 /* SpellCheckStateDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckStateDescriptionView.swift; sourceTree = "<group>"; };
+		CED50D752C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CabinetGrotesk-Variable.ttf"; sourceTree = "<group>"; };
+		CED50D7A2C7BEE1F00B5D877 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		CED50D7B2C7BEE1F00B5D877 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		CED50D7C2C7BEE1F00B5D877 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		CED50D7D2C7BEE1F00B5D877 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		CED50D7E2C7BEE1F00B5D877 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		CED50D7F2C7BEE1F00B5D877 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		CED50D802C7BEE1F00B5D877 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		CED50D812C7BEE1F00B5D877 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		CED50D822C7BEE2000B5D877 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CED50D832C7BEE2000B5D877 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CED50D842C7BEE2000B5D877 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CED50D852C7BEE2000B5D877 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		CED50D862C7BEE2000B5D877 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		CED50D872C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		CED50D882C7BEE2000B5D877 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		CED50D892C7BEE2000B5D877 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CED50D8A2C7BEE2000B5D877 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		CED50D8B2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CED50DB02C83E84200B5D877 /* ServerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTextField.swift; sourceTree = "<group>"; };
+		CED50DB32C83F37800B5D877 /* QuickFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFunctions.swift; sourceTree = "<group>"; };
+		CED50DB62C85D7F700B5D877 /* RoundedRectangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleShape.swift; sourceTree = "<group>"; };
+		CEDEB9382C791B790042346C /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		CEDEB93A2C7920470042346C /* SpellCheckerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckerViewModel.swift; sourceTree = "<group>"; };
+		CEDEB93E2C793E3E0042346C /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		CEDEB9402C7942FE0042346C /* SpellCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckResponse.swift; sourceTree = "<group>"; };
+		CEDEB9442C794AF80042346C /* SpellCheckApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckApi.swift; sourceTree = "<group>"; };
+		CEDEB9472C7952A50042346C /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		CEDEB9492C7953FA0042346C /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		CEDEB94C2C7957710042346C /* SpellCheckError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckError.swift; sourceTree = "<group>"; };
+		CEDEB94E2C7957FD0042346C /* SpellCheckRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckRepo.swift; sourceTree = "<group>"; };
+		CEDEB9512C795AA00042346C /* SpellCheckRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckRepoImpl.swift; sourceTree = "<group>"; };
+		CEDEB9552C79732F0042346C /* SpellCheckMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckMatchView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE75740D2C692FB700B1E9CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7574382C696AB400B1E9CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE75746E2C6B176E00B1E9CE /* EmojiKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE74F0852C72B98100BE305B /* SpellCheckServers */ = {
+			isa = PBXGroup;
+			children = (
+				CE74F0882C72BD2700BE305B /* widgets */,
+				CE74F0862C72B9AF00BE305B /* SpellCheckServerView.swift */,
+			);
+			path = SpellCheckServers;
+			sourceTree = "<group>";
+		};
+		CE74F0882C72BD2700BE305B /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE74F0892C72BD4100BE305B /* ServerListItemView.swift */,
+				CED50DB02C83E84200B5D877 /* ServerTextField.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CE7574072C692FB700B1E9CE = {
+			isa = PBXGroup;
+			children = (
+				CE7574122C692FB700B1E9CE /* App */,
+				CE75743C2C696AB400B1E9CE /* Keyboard */,
+				CE7574112C692FB700B1E9CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE7574112C692FB700B1E9CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574102C692FB700B1E9CE /* NaijaGuruApp.app */,
+				CE75743B2C696AB400B1E9CE /* NaijaKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE7574122C692FB700B1E9CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574672C6B0E4600B1E9CE /* Assets */,
+				CED50DB22C83F36300B5D877 /* Utilities */,
+				CE7574242C69325700B1E9CE /* Theme */,
+				CED50D6C2C7BC93800B5D877 /* Models */,
+				CE7574232C69319000B1E9CE /* Views */,
+				CE7574732C6BAC7800B1E9CE /* ViewModels */,
+				CE7574132C692FB700B1E9CE /* NaijaGuruApp.swift */,
+				CE7574172C692FB900B1E9CE /* Assets.xcassets */,
+				CE7574642C6AFF4200B1E9CE /* Info.plist */,
+				CE7574632C6AFED900B1E9CE /* NaijaGuruApp.entitlements */,
+				CE7574192C692FB900B1E9CE /* Preview Content */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE7574192C692FB900B1E9CE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE75741A2C692FB900B1E9CE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE7574232C69319000B1E9CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4217D2C8E4DC900DF7297 /* IgnoreRules */,
+				CE74F0852C72B98100BE305B /* SpellCheckServers */,
+				CE7574312C69575100B1E9CE /* Settings */,
+				CE7574292C69434F00B1E9CE /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE7574242C69325700B1E9CE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574252C69327300B1E9CE /* AppColours.swift */,
+				CE7574272C693BBE00B1E9CE /* AppDimensions.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		CE7574292C69434F00B1E9CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE75742A2C6943C300B1E9CE /* widgets */,
+				CE7574212C69318200B1E9CE /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE75742A2C6943C300B1E9CE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE75742D2C694C3200B1E9CE /* EnableKeyboardView.swift */,
+				CE75742F2C69519D00B1E9CE /* RoundedCornersShape.swift */,
+				CE7574652C6B0B7200B1E9CE /* GifImage.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CE7574312C69575100B1E9CE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574342C6960B100B1E9CE /* widgets */,
+				CE7574322C69576000B1E9CE /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE7574342C6960B100B1E9CE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574352C6960C400B1E9CE /* SettingsListItem.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CE75743C2C696AB400B1E9CE /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9462C7952930042346C /* di */,
+				CEDEB9332C7914D20042346C /* Data */,
+				CEDEB9322C7914CD0042346C /* Domain */,
+				CEDEB9312C7914C60042346C /* Presentation */,
+				CE7574622C6AFE6600B1E9CE /* NaijaKeyboard.entitlements */,
+				CE75743D2C696AB500B1E9CE /* KeyboardViewController.swift */,
+				CE75743F2C696AB500B1E9CE /* Info.plist */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		CE75744B2C69998D00B1E9CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574472C69759900B1E9CE /* MainView.swift */,
+				CE75744D2C6999C600B1E9CE /* NigerianPidginSpellChecker */,
+				CE75744C2C6999A000B1E9CE /* ASCIIKeyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE75744C2C6999A000B1E9CE /* ASCIIKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574502C699A2D00B1E9CE /* Widgets */,
+				CE75744E2C699A0E00B1E9CE /* ASCIIKeyboard.swift */,
+			);
+			path = ASCIIKeyboard;
+			sourceTree = "<group>";
+		};
+		CE75744D2C6999C600B1E9CE /* NigerianPidginSpellChecker */ = {
+			isa = PBXGroup;
+			children = (
+				CE75745F2C6AEC9600B1E9CE /* widgets */,
+				CE75745D2C6AEBAA00B1E9CE /* NaijaKeyboard.swift */,
+			);
+			path = NigerianPidginSpellChecker;
+			sourceTree = "<group>";
+		};
+		CE7574502C699A2D00B1E9CE /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE75745A2C699B8900B1E9CE /* Alphabets.swift */,
+				CE7574512C699A4F00B1E9CE /* NumbersAndSymbols.swift */,
+				CE7574532C699A8800B1E9CE /* CharacterButton.swift */,
+				CE7574582C699B3100B1E9CE /* SpecialButton.swift */,
+				CE75746F2C6B1F8300B1E9CE /* EmojiKeypad.swift */,
+				CE1678612C7563D70057F0A1 /* NaijaGuruIcon.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		CE7574552C699AB400B1E9CE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574562C699AE300B1E9CE /* KeyboardColours.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		CE75745F2C6AEC9600B1E9CE /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574602C6AECC100B1E9CE /* NaijaKeyboardIcon.swift */,
+				CEDEB9552C79732F0042346C /* SpellCheckMatchView.swift */,
+				CED50D722C7BE06E00B5D877 /* SpellCheckStateDescriptionView.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CE7574672C6B0E4600B1E9CE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CED50D742C7BEDC100B5D877 /* Fonts */,
+				CE74F0832C72B21000BE305B /* instructions_gif.gif */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CE7574732C6BAC7800B1E9CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE7574742C6BAD0E00B1E9CE /* HomeViewModel.swift */,
+				CED50D6A2C7BC87000B5D877 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEB4217A2C8E2CE600DF7297 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4217B2C8E2D1E00DF7297 /* SharedUserDefaults.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		CEB4217D2C8E4DC900DF7297 /* IgnoreRules */ = {
+			isa = PBXGroup;
+			children = (
+				CEB421802C8E54F700DF7297 /* widgets */,
+				CEB4217E2C8E4DE300DF7297 /* IgnoreRulesView.swift */,
+			);
+			path = IgnoreRules;
+			sourceTree = "<group>";
+		};
+		CEB421802C8E54F700DF7297 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CEB421812C8E550700DF7297 /* IgnoreRuleListItem.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		CED50D6C2C7BC93800B5D877 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CED50D6D2C7BC9B000B5D877 /* Server.swift */,
+				CEB421782C8E2A8800DF7297 /* IgnoreRule.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CED50D6F2C7BDAFF00B5D877 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CED50D702C7BDB1100B5D877 /* Connectivity.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CED50D742C7BEDC100B5D877 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CED50D792C7BEE0100B5D877 /* Poppins */,
+				CED50D782C7BEDF300B5D877 /* CabinetGrotesk */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CED50D782C7BEDF300B5D877 /* CabinetGrotesk */ = {
+			isa = PBXGroup;
+			children = (
+				CED50D752C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf */,
+			);
+			path = CabinetGrotesk;
+			sourceTree = "<group>";
+		};
+		CED50D792C7BEE0100B5D877 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				CED50D8A2C7BEE2000B5D877 /* Poppins-Black.ttf */,
+				CED50D842C7BEE2000B5D877 /* Poppins-BlackItalic.ttf */,
+				CED50D7D2C7BEE1F00B5D877 /* Poppins-Bold.ttf */,
+				CED50D822C7BEE2000B5D877 /* Poppins-BoldItalic.ttf */,
+				CED50D8B2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf */,
+				CED50D7F2C7BEE1F00B5D877 /* Poppins-ExtraBoldItalic.ttf */,
+				CED50D892C7BEE2000B5D877 /* Poppins-ExtraLight.ttf */,
+				CED50D7C2C7BEE1F00B5D877 /* Poppins-ExtraLightItalic.ttf */,
+				CED50D882C7BEE2000B5D877 /* Poppins-Italic.ttf */,
+				CED50D7A2C7BEE1F00B5D877 /* Poppins-Light.ttf */,
+				CED50D812C7BEE1F00B5D877 /* Poppins-LightItalic.ttf */,
+				CED50D862C7BEE2000B5D877 /* Poppins-Medium.ttf */,
+				CED50D832C7BEE2000B5D877 /* Poppins-MediumItalic.ttf */,
+				CED50D7E2C7BEE1F00B5D877 /* Poppins-Regular.ttf */,
+				CED50D802C7BEE1F00B5D877 /* Poppins-SemiBold.ttf */,
+				CED50D872C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf */,
+				CED50D7B2C7BEE1F00B5D877 /* Poppins-Thin.ttf */,
+				CED50D852C7BEE2000B5D877 /* Poppins-ThinItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		CED50DB22C83F36300B5D877 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CED50DB32C83F37800B5D877 /* QuickFunctions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CED50DB52C85D7D100B5D877 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				CED50DB62C85D7F700B5D877 /* RoundedRectangleShape.swift */,
+			);
+			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		CEDEB9312C7914C60042346C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CED50DB52C85D7D100B5D877 /* SharedViews */,
+				CED50D6F2C7BDAFF00B5D877 /* Utilities */,
+				CEDEB9372C791A1F0042346C /* ViewModels */,
+				CE7574552C699AB400B1E9CE /* Theme */,
+				CE75744B2C69998D00B1E9CE /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CEDEB9322C7914CD0042346C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB93D2C793C3A0042346C /* ApiService */,
+				CEDEB93C2C793BF70042346C /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CEDEB9332C7914D20042346C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9362C7915930042346C /* Repository */,
+				CEDEB9352C7915830042346C /* Datasource */,
+				CEDEB9342C7915450042346C /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CEDEB9342C7915450042346C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9402C7942FE0042346C /* SpellCheckResponse.swift */,
+				CEB421762C8E236400DF7297 /* IgnoreRule.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEDEB9352C7915830042346C /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4217A2C8E2CE600DF7297 /* Database */,
+				CEDEB9422C794AC90042346C /* Network */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		CEDEB9362C7915930042346C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9502C795A920042346C /* SpellCheck */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CEDEB9372C791A1F0042346C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9382C791B790042346C /* NavigationViewModel.swift */,
+				CEDEB93A2C7920470042346C /* SpellCheckerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEDEB93C2C793BF70042346C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB94B2C7956D20042346C /* SpellCheck */,
+				CEDEB94E2C7957FD0042346C /* SpellCheckRepo.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CEDEB93D2C793C3A0042346C /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB93E2C793E3E0042346C /* ApiClient.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		CEDEB9422C794AC90042346C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9432C794AD60042346C /* SpellCheck */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CEDEB9432C794AD60042346C /* SpellCheck */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9442C794AF80042346C /* SpellCheckApi.swift */,
+			);
+			path = SpellCheck;
+			sourceTree = "<group>";
+		};
+		CEDEB9462C7952930042346C /* di */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9472C7952A50042346C /* ServiceLocator.swift */,
+				CEDEB9492C7953FA0042346C /* DI.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		CEDEB94B2C7956D20042346C /* SpellCheck */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB94C2C7957710042346C /* SpellCheckError.swift */,
+			);
+			path = SpellCheck;
+			sourceTree = "<group>";
+		};
+		CEDEB9502C795A920042346C /* SpellCheck */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEB9512C795AA00042346C /* SpellCheckRepoImpl.swift */,
+			);
+			path = SpellCheck;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE75740F2C692FB700B1E9CE /* NaijaGuruApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE75741E2C692FB900B1E9CE /* Build configuration list for PBXNativeTarget "NaijaGuruApp" */;
+			buildPhases = (
+				CE75740C2C692FB700B1E9CE /* Sources */,
+				CE75740D2C692FB700B1E9CE /* Frameworks */,
+				CE75740E2C692FB700B1E9CE /* Resources */,
+				CE7574462C696AB500B1E9CE /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE7574412C696AB500B1E9CE /* PBXTargetDependency */,
+			);
+			name = NaijaGuruApp;
+			productName = naijakeyboard;
+			productReference = CE7574102C692FB700B1E9CE /* NaijaGuruApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE75743A2C696AB400B1E9CE /* NaijaKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7574432C696AB500B1E9CE /* Build configuration list for PBXNativeTarget "NaijaKeyboard" */;
+			buildPhases = (
+				CE7574372C696AB400B1E9CE /* Sources */,
+				CE7574382C696AB400B1E9CE /* Frameworks */,
+				CE7574392C696AB400B1E9CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaijaKeyboard;
+			packageProductDependencies = (
+				CE75746D2C6B176E00B1E9CE /* EmojiKit */,
+			);
+			productName = "Nigerian Pidgin Keyboard";
+			productReference = CE75743B2C696AB400B1E9CE /* NaijaKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE7574082C692FB700B1E9CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					CE75740F2C692FB700B1E9CE = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					CE75743A2C696AB400B1E9CE = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = CE75740B2C692FB700B1E9CE /* Build configuration list for PBXProject "NaijaGuruApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE7574072C692FB700B1E9CE;
+			packageReferences = (
+				CE75746C2C6B176E00B1E9CE /* XCRemoteSwiftPackageReference "EmojiKit" */,
+			);
+			productRefGroup = CE7574112C692FB700B1E9CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE75740F2C692FB700B1E9CE /* NaijaGuruApp */,
+				CE75743A2C696AB400B1E9CE /* NaijaKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE75740E2C692FB700B1E9CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED50DAA2C7BEE2000B5D877 /* Poppins-ExtraLight.ttf in Resources */,
+				CE74F0842C72B21000BE305B /* instructions_gif.gif in Resources */,
+				CED50DA22C7BEE2000B5D877 /* Poppins-ThinItalic.ttf in Resources */,
+				CED50DAC2C7BEE2000B5D877 /* Poppins-Black.ttf in Resources */,
+				CED50D902C7BEE2000B5D877 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				CED50D9C2C7BEE2000B5D877 /* Poppins-BoldItalic.ttf in Resources */,
+				CED50DA82C7BEE2000B5D877 /* Poppins-Italic.ttf in Resources */,
+				CED50DA42C7BEE2000B5D877 /* Poppins-Medium.ttf in Resources */,
+				CED50DA62C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				CED50D982C7BEE2000B5D877 /* Poppins-SemiBold.ttf in Resources */,
+				CED50D8C2C7BEE2000B5D877 /* Poppins-Light.ttf in Resources */,
+				CED50D9E2C7BEE2000B5D877 /* Poppins-MediumItalic.ttf in Resources */,
+				CED50D942C7BEE2000B5D877 /* Poppins-Regular.ttf in Resources */,
+				CED50DA02C7BEE2000B5D877 /* Poppins-BlackItalic.ttf in Resources */,
+				CED50D962C7BEE2000B5D877 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				CED50D922C7BEE2000B5D877 /* Poppins-Bold.ttf in Resources */,
+				CED50D9A2C7BEE2000B5D877 /* Poppins-LightItalic.ttf in Resources */,
+				CE75741B2C692FB900B1E9CE /* Preview Assets.xcassets in Resources */,
+				CED50DAE2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf in Resources */,
+				CED50D8E2C7BEE2000B5D877 /* Poppins-Thin.ttf in Resources */,
+				CE7574182C692FB900B1E9CE /* Assets.xcassets in Resources */,
+				CED50D762C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7574392C696AB400B1E9CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED50D972C7BEE2000B5D877 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				CED50DA92C7BEE2000B5D877 /* Poppins-Italic.ttf in Resources */,
+				CED50DA72C7BEE2000B5D877 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				CED50DA12C7BEE2000B5D877 /* Poppins-BlackItalic.ttf in Resources */,
+				CED50D9F2C7BEE2000B5D877 /* Poppins-MediumItalic.ttf in Resources */,
+				CED50DAD2C7BEE2000B5D877 /* Poppins-Black.ttf in Resources */,
+				CED50D9B2C7BEE2000B5D877 /* Poppins-LightItalic.ttf in Resources */,
+				CE75745C2C6A9F7800B1E9CE /* Assets.xcassets in Resources */,
+				CED50DA32C7BEE2000B5D877 /* Poppins-ThinItalic.ttf in Resources */,
+				CED50D932C7BEE2000B5D877 /* Poppins-Bold.ttf in Resources */,
+				CED50D952C7BEE2000B5D877 /* Poppins-Regular.ttf in Resources */,
+				CED50D8F2C7BEE2000B5D877 /* Poppins-Thin.ttf in Resources */,
+				CED50DA52C7BEE2000B5D877 /* Poppins-Medium.ttf in Resources */,
+				CED50DAB2C7BEE2000B5D877 /* Poppins-ExtraLight.ttf in Resources */,
+				CED50D912C7BEE2000B5D877 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				CED50D992C7BEE2000B5D877 /* Poppins-SemiBold.ttf in Resources */,
+				CED50DAF2C7BEE2000B5D877 /* Poppins-ExtraBold.ttf in Resources */,
+				CED50D9D2C7BEE2000B5D877 /* Poppins-BoldItalic.ttf in Resources */,
+				CED50D8D2C7BEE2000B5D877 /* Poppins-Light.ttf in Resources */,
+				CED50D772C7BEDD800B5D877 /* CabinetGrotesk-Variable.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE75740C2C692FB700B1E9CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED50DB12C83E84200B5D877 /* ServerTextField.swift in Sources */,
+				CE75742E2C694C3200B1E9CE /* EnableKeyboardView.swift in Sources */,
+				CEB421822C8E550700DF7297 /* IgnoreRuleListItem.swift in Sources */,
+				CE7574752C6BAD0E00B1E9CE /* HomeViewModel.swift in Sources */,
+				CE7574332C69576000B1E9CE /* SettingsView.swift in Sources */,
+				CE7574662C6B0B7200B1E9CE /* GifImage.swift in Sources */,
+				CE74F0872C72B9AF00BE305B /* SpellCheckServerView.swift in Sources */,
+				CE7574282C693BBE00B1E9CE /* AppDimensions.swift in Sources */,
+				CE7574222C69318200B1E9CE /* HomeView.swift in Sources */,
+				CE7574142C692FB700B1E9CE /* NaijaGuruApp.swift in Sources */,
+				CE7574362C6960C400B1E9CE /* SettingsListItem.swift in Sources */,
+				CEB4217F2C8E4DE300DF7297 /* IgnoreRulesView.swift in Sources */,
+				CED50DB42C83F37800B5D877 /* QuickFunctions.swift in Sources */,
+				CED50D6E2C7BC9B000B5D877 /* Server.swift in Sources */,
+				CE7574262C69327300B1E9CE /* AppColours.swift in Sources */,
+				CE74F08A2C72BD4100BE305B /* ServerListItemView.swift in Sources */,
+				CE7574302C69519D00B1E9CE /* RoundedCornersShape.swift in Sources */,
+				CED50D6B2C7BC87000B5D877 /* SettingsViewModel.swift in Sources */,
+				CEB421792C8E2A8800DF7297 /* IgnoreRule.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7574372C696AB400B1E9CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDEB9482C7952A50042346C /* ServiceLocator.swift in Sources */,
+				CEDEB94F2C7957FD0042346C /* SpellCheckRepo.swift in Sources */,
+				CE75743E2C696AB500B1E9CE /* KeyboardViewController.swift in Sources */,
+				CE7574482C69759900B1E9CE /* MainView.swift in Sources */,
+				CED50D732C7BE06E00B5D877 /* SpellCheckStateDescriptionView.swift in Sources */,
+				CEDEB9392C791B790042346C /* NavigationViewModel.swift in Sources */,
+				CEB421772C8E236400DF7297 /* IgnoreRule.swift in Sources */,
+				CE7574522C699A4F00B1E9CE /* NumbersAndSymbols.swift in Sources */,
+				CE75744F2C699A0E00B1E9CE /* ASCIIKeyboard.swift in Sources */,
+				CE7574572C699AE300B1E9CE /* KeyboardColours.swift in Sources */,
+				CE1678622C7563D80057F0A1 /* NaijaGuruIcon.swift in Sources */,
+				CEDEB9522C795AA00042346C /* SpellCheckRepoImpl.swift in Sources */,
+				CEDEB9452C794AF80042346C /* SpellCheckApi.swift in Sources */,
+				CEB4217C2C8E2D1E00DF7297 /* SharedUserDefaults.swift in Sources */,
+				CE7574612C6AECC100B1E9CE /* NaijaKeyboardIcon.swift in Sources */,
+				CE75745E2C6AEBAA00B1E9CE /* NaijaKeyboard.swift in Sources */,
+				CE7574592C699B3100B1E9CE /* SpecialButton.swift in Sources */,
+				CEDEB9562C79732F0042346C /* SpellCheckMatchView.swift in Sources */,
+				CE75745B2C699B8900B1E9CE /* Alphabets.swift in Sources */,
+				CED50DB72C85D7F800B5D877 /* RoundedRectangleShape.swift in Sources */,
+				CEDEB9412C7942FE0042346C /* SpellCheckResponse.swift in Sources */,
+				CEDEB93F2C793E3E0042346C /* ApiClient.swift in Sources */,
+				CEDEB93B2C7920470042346C /* SpellCheckerViewModel.swift in Sources */,
+				CEDEB94D2C7957710042346C /* SpellCheckError.swift in Sources */,
+				CED50D712C7BDB1100B5D877 /* Connectivity.swift in Sources */,
+				CE7574702C6B1F8300B1E9CE /* EmojiKeypad.swift in Sources */,
+				CEDEB94A2C7953FA0042346C /* DI.swift in Sources */,
+				CE7574542C699A8800B1E9CE /* CharacterButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE7574412C696AB500B1E9CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE75743A2C696AB400B1E9CE /* NaijaKeyboard */;
+			targetProxy = CE7574402C696AB500B1E9CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE75741C2C692FB900B1E9CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE75741D2C692FB900B1E9CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE75741F2C692FB900B1E9CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/NaijaGuruApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6K4Z4LTP3U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Guru";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = guru.naija.naijaguruapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE7574202C692FB900B1E9CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/NaijaGuruApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6K4Z4LTP3U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Guru";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = guru.naija.naijaguruapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE7574442C696AB500B1E9CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Keyboard/NaijaKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6K4Z4LTP3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Keyboard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = guru.naija.naijaguruapp.naijakeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE7574452C696AB500B1E9CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Keyboard/NaijaKeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6K4Z4LTP3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Naija Keyboard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = guru.naija.naijaguruapp.naijakeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE75740B2C692FB700B1E9CE /* Build configuration list for PBXProject "NaijaGuruApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE75741C2C692FB900B1E9CE /* Debug */,
+				CE75741D2C692FB900B1E9CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE75741E2C692FB900B1E9CE /* Build configuration list for PBXNativeTarget "NaijaGuruApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE75741F2C692FB900B1E9CE /* Debug */,
+				CE7574202C692FB900B1E9CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7574432C696AB500B1E9CE /* Build configuration list for PBXNativeTarget "NaijaKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7574442C696AB500B1E9CE /* Debug */,
+				CE7574452C696AB500B1E9CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE75746C2C6B176E00B1E9CE /* XCRemoteSwiftPackageReference "EmojiKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/niklasamslgruber/EmojiKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE75746D2C6B176E00B1E9CE /* EmojiKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE75746C2C6B176E00B1E9CE /* XCRemoteSwiftPackageReference "EmojiKit" */;
+			productName = EmojiKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE7574082C692FB700B1E9CE /* Project object */;
+}
