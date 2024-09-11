@@ -81,12 +81,10 @@ struct ASCIIKeyboard: View {
                         }
                         
                         SpecialButton(image: nil, title: "space", width: spaceBarWidth){
-                            //                            insertText(" ")
                             spellCheckerVM.insertText(" ")
                         }
                         
                         SpecialButton(image: nil, title: "return", width: returnWidth, isDark: true){
-                            //                            insertText("\n")
                             spellCheckerVM.insertText("\n")
                         }
                     }
